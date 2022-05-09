@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "astro": "^1.0.0-beta.20",
+    "postcss-jit-props": "^1.0.6",
     "postcss-preset-env": "^7.5.0",
     "prismjs": "^1.28.0"
   },

@@ -1,0 +1,12 @@
+@import "slyd";
+
+@import "./custom.prism.css";
+@import "./slyd.overrides.css";
+
+.lifted {
+  box-shadow: var(--shadow-5);
+  padding-inline: var(--size-7);
+  padding-block: var(--size-5);
+  border-radius: var(--radius-3);
+}
+
