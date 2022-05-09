@@ -4,11 +4,9 @@ import Prism from '../utils/Prism.astro'
 
 <slyd>
   <h1 uppercase>Slide 1</h1>
-  <!-- <h2>it's <span highlight>working</span> grrreat!</h2> -->
-  <Prism lang='html' code={`&#60;slyd&#62;
-&#60;h2&#62;Minimal Markup&#60;/h2&#62;
-&#60;pre class="language-html line-numbers show-language"&#62;&#60;code&#62;
-...
-&#60;/code&#62;&#60;/pre&#62;
-&#60;/slyd&#62;`}/>
+  <Prism lang='css' code={`
+.scrollable {
+  overflow-x: auto;
+}`}
+  />
 </slyd>
