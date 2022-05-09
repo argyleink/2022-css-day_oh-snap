@@ -5,3 +5,50 @@ slyds > slyd-group:not(:last-child) > slyd:last-child::after {
 h3, h4, h5, h6 {
   color: var(--text-color-2);
 }
+
+slyds > slyd:after, slyds > slyd-group:not(:last-child) > slyd:last-child:after {
+  font-size: max(2vmax, 32px);
+}
+
+code-gallery {
+  --space: 5vmin;
+  display: flex;
+  align-items: center;
+  gap: var(--space);
+  overflow: scroll hidden;
+  overscroll-behavior-x: contain;
+  max-inline-size: 94vw;
+  padding-inline: var(--space);
+  padding-block-end: 20px;
+  scroll-padding-inline: var(--space);
+  scroll-snap-type: x;
+
+  @media (orientation: portrait) { & {
+    transform: translateZ(0);
+  }}
+
+  & > * {
+    flex-shrink: 0;
+    scroll-snap-align: center;
+  }
+
+  & > picture {
+    transform: translateZ(0);
+  }
+}
+
+@media (orientation: portrait) and (max-width: 720px) {
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0 2vmax;
+  }
+}
+
+@media (min-width: 1024px) {
+  h2.lg-codeblock-adjust {
+    transform: translateZ(6px) translateY(50px);
+  }
+
+  h2.xl-codeblock-adjust {
+    transform: translateZ(6px) translateY(75px);
+  }
+}
