@@ -1,0 +1,42 @@
+---
+import IntroTest from '../slyds/intro.test.astro'
+---
+
+<script>
+	import "slyd";
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/src/index.css">
+	<title>CSS Day 2022</title>
+</head>
+<body>
+	<slyds>
+
+    <slyd-group>
+    	<IntroTest/>
+    </slyd-group>
+
+    <slyd-group>
+    	<slyd id="two-way">
+        <h2>2 Way</h2>
+        <h3>bi-directional CSS parallax</h3>
+      </slyd>
+      <slyd id="two-way">
+        <h2>2 Way</h2>
+        <h3>bi-directional CSS parallax</h3>
+      </slyd>
+      <slyd id="two-way">
+        <h2>2 Way</h2>
+        <h3>bi-directional CSS parallax</h3>
+      </slyd>
+    </slyd-group>
+
+  </slyds>
+</body>
+</html>

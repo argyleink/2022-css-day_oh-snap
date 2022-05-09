@@ -1,0 +1,57 @@
+code[class*="language-"], pre[class*="language-"] {
+  text-align: left;
+  font-size: clamp(.8rem, 1.5rem, 3vmin);
+
+  @media (max-width: 640px) { & {
+    font-size: 16px;
+    transform: translateZ(-15px);
+  }}
+
+  @media (orientation: portrait) { & {
+    font-size: 2.5vmin;
+  }}
+
+  @media (width >= 480px) { & {
+    font-size: clamp(1rem, 2rem, 4vmin);
+  }}
+
+  @media (width >= 2000px) { & {
+    font-size: max(48px, 4vmin);
+  }}
+}
+
+.token.atrule, 
+.token.attr-value {
+  color: hsl(120 61% 70%);
+}
+
+.token.atrule {
+  color: var(--brand-color-2);
+}
+
+.token.atrule > .token:first-of-type {
+  color: white;
+  text-shadow: 0 0 .5em white;
+  display: inline-block;
+
+  /* &::first-letter {
+    color: hsl(120 40% 75%);
+    text-shadow: 0 0 .5em #02c435;
+  } */
+}
+
+.token.function {
+  color: var(--brand-color-3);
+  text-shadow: 0 0 .5em #4003e6;
+}
+
+.token.url {
+  color: var(--text-1);
+}
+
+pre[class*="language-"] {
+  box-shadow: var(--shadow-5);
+  padding-inline: var(--size-7);
+  padding-block: var(--size-5);
+  border-radius: var(--radius-3);
+}
