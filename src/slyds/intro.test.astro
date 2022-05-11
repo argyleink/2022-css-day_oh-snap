@@ -1,12 +1,12 @@
 ---
-import Prism from '../utils/Prism.astro'
+import Prism from '/src/utils/Prism.astro'
 ---
 
 <slyd id="intro">
   <h1 uppercase>Slide 1</h1>
   <Prism lang='css' code={`
-.scrollable {
-  overflow-x: auto;
-}`}
-  />
+    .scrollable {
+      overflow-x: auto;
+    }
+  `}/>
 </slyd>

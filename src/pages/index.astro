@@ -1,11 +1,13 @@
 ---
+import Intro from '../slyds/Intro.astro'
+
 import Overflow from '../slyds/review/Overflow.astro'
 import Touch from '../slyds/review/Touch.astro'
 import SnapType from '../slyds/review/SnapType.astro'
 ---
 
 <script>
-	import "slyd";
+	import "slyd"
 </script>
 
 <!DOCTYPE html>
@@ -23,6 +25,10 @@ import SnapType from '../slyds/review/SnapType.astro'
 </head>
 <body>
 	<slyds>
+
+		<slyd-group>
+    	<Intro />
+    </slyd-group>
 
     <slyd-group>
     	<Overflow />

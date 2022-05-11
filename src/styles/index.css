@@ -1,11 +1,9 @@
-@import "slyd";
+@layer libraries, overrides, slides;
 
-@import "./custom.prism.css";
-@import "./slyd.overrides.css";
+@import "slyd" layer(libraries);
 
-.lifted {
-  box-shadow: var(--shadow-5);
-  padding-inline: var(--size-7);
-  padding-block: var(--size-5);
-  border-radius: var(--radius-3);
-}
+@import "./custom.prism.css" layer(overrides);
+@import "./slyd.overrides.css" layer(overrides);
+
+@import "./utilities.css" layer(slides);
+@import "./components.css" layer(slides);

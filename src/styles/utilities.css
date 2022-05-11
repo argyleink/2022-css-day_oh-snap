@@ -1,0 +1,8 @@
+.lifted,
+code-gallery > pre {
+  background: hsl(var(--hue) var(--saturation) 12%);
+  box-shadow: var(--shadow-3);
+  padding-inline: var(--size-7);
+  padding-block: var(--size-5);
+  border-radius: var(--radius-3);
+}

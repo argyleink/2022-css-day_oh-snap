@@ -1,6 +1,47 @@
+---
+import Prism from '/src/utils/Prism.astro'
+---
+
 <slyd id="snap-type">
   <h2>Snap Type</h2>
-  <p lead>Dont Repeat Yourself</p>
-  <p lead>Dont Repeat Yourself</p>
-  <p color="brand-2">Dont Repeat Yourself</p>
+  <demo-stage>
+    <Prism lang='css' code={`
+      .scroll-x {
+        overflow-x: auto;
+      }
+    `}/>
+    <slyd-scrollport>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </slyd-scrollport>
+  </demo-stage>
+
+  <demo-stage>
+    <Prism lang='css' code={`
+      .scroll-x {
+        direction: rtl;
+        overflow-x: auto;
+      }
+    `}/>
+    <slyd-scrollport style="direction: rtl">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </slyd-scrollport>
+  </demo-stage>
 </slyd>
