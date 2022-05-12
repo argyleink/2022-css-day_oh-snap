@@ -17,6 +17,30 @@ code-gallery > pre {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.snap-x {
+  scroll-snap-type: x mandatory;
+
+  & > * {
+    scroll-snap-align: center;
+  }
+}
+
+.snap-y {
+  scroll-snap-type: y proximity;
+
+  &.snap-stop {
+    scroll-snap-type: y mandatory;
+
+    & > * {
+      scroll-snap-stop: always;
+    }
+  }
+
+  & > * {
+    scroll-snap-align: center;
+  }
+}
+
 .rtl {
   direction: rtl;
 }

@@ -1,8 +1,12 @@
 demo-stage {
   display: grid;
   gap: var(--size-6);
-  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  align-items: center;
+
   max-inline-size: 90vw;
+  inline-size: 100%;
   max-block-size: 20vw;
 
   @nest slyd > &:first-of-type {

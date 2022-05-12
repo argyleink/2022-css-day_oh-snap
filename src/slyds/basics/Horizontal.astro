@@ -1,0 +1,21 @@
+---
+import Prism from '/src/utils/Prism.astro'
+---
+
+<slyd id="basic-horizontal">
+  <h2>Horizontal</h2>
+  <demo-stage>
+    <Prism lang='css' code={`
+      .snap-x {
+        scroll-snap-type: x mandatory;
+
+        & > * {
+          scroll-snap-align: center;
+        }
+      }
+    `}/>
+    <slyd-scrollport class="snap-x">
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    </slyd-scrollport>
+  </demo-stage>
+</slyd>
