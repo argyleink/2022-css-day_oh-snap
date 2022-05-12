@@ -2,27 +2,27 @@
 import Prism from '/src/utils/Prism.astro'
 ---
 
-<slyd id="snap-type">
-  <h2 class="lg-codeblock-adjust">Snap Type</h2>
+<slyd id="vertical">
+  <h2 class="lg-codeblock-adjust">Vertical</h2>
   <demo-stage>
     <Prism lang='css' code={`
-      .scroll-x {
-        overflow-x: auto;
+      .scroll-y {
+        overflow-y: auto;
       }
     `}/>
-    <slyd-scrollport>
+    <slyd-scrollport class="vertical">
       <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
     </slyd-scrollport>
   </demo-stage>
 
   <demo-stage>
     <Prism lang='css' code={`
-      .scroll-x {
+      .scroll-y-rtl {
+        overflow-y: auto;
         direction: rtl;
-        overflow-x: auto;
       }
     `}/>
-    <slyd-scrollport style="direction: rtl">
+    <slyd-scrollport class="vertical rtl">
       <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
     </slyd-scrollport>
   </demo-stage>

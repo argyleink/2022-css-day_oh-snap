@@ -1,0 +1,29 @@
+---
+import Prism from '/src/utils/Prism.astro'
+---
+
+<slyd id="both-overflow">
+  <h2 class="lg-codeblock-adjust">Both</h2>
+  <demo-stage>
+    <Prism lang='css' code={`
+      .scroll {
+        overflow: auto;
+      }
+    `}/>
+    <slyd-scrollport class="both">
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    </slyd-scrollport>
+  </demo-stage>
+
+  <demo-stage>
+    <Prism lang='css' code={`
+      .scroll-rtl {
+        overflow: auto;
+        direction: rtl;
+      }
+    `}/>
+    <slyd-scrollport class="both rtl">
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    </slyd-scrollport>
+  </demo-stage>
+</slyd>

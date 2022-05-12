@@ -4,6 +4,8 @@
 
 @import "./custom.prism.css" layer(overrides);
 @import "./slyd.overrides.css" layer(overrides);
-
 @import "./utilities.css" layer(slides);
-@import "./components.css" layer(slides);
+
+@import "./components/code-gallery.css" layer(slides);
+@import "./components/demo-stage.css" layer(slides);
+@import "./components/slyd-scrollport.css" layer(slides);

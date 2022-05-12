@@ -2,8 +2,8 @@
 import Prism from '/src/utils/Prism.astro'
 ---
 
-<slyd id="snap-type">
-  <h2 class="lg-codeblock-adjust">Snap Type</h2>
+<slyd id="horizontal">
+  <h2 class="lg-codeblock-adjust">Horizontal</h2>
   <demo-stage>
     <Prism lang='css' code={`
       .scroll-x {
@@ -17,12 +17,12 @@ import Prism from '/src/utils/Prism.astro'
 
   <demo-stage>
     <Prism lang='css' code={`
-      .scroll-x {
-        direction: rtl;
+      .scroll-x-rtl {
         overflow-x: auto;
+        direction: rtl;
       }
     `}/>
-    <slyd-scrollport style="direction: rtl">
+    <slyd-scrollport class="rtl">
       <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
     </slyd-scrollport>
   </demo-stage>

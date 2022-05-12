@@ -1,0 +1,11 @@
+demo-stage {
+  display: grid;
+  gap: var(--size-6);
+  grid-template-columns: 1fr 1fr;
+  max-inline-size: 90vw;
+  max-block-size: 20vw;
+
+  @nest slyd > &:first-of-type {
+    margin-block-end: var(--size-5);
+  }
+}

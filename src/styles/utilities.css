@@ -6,3 +6,17 @@ code-gallery > pre {
   padding-block: var(--size-5);
   border-radius: var(--radius-3);
 }
+
+.vertical {
+  flex-direction: column;
+  justify-self: flex-start;
+}
+
+.both {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.rtl {
+  direction: rtl;
+}

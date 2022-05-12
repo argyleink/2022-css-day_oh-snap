@@ -1,0 +1,26 @@
+code-gallery {
+  --space: 5vmin;
+  display: flex;
+  align-items: center;
+  gap: var(--space);
+  overflow: scroll hidden;
+  overscroll-behavior-x: contain;
+  max-inline-size: 94vw;
+  padding-inline: var(--space);
+  padding-block-end: 20px;
+  scroll-padding-inline: var(--space);
+  scroll-snap-type: x;
+
+  @media (orientation: portrait) {
+    transform: translateZ(0);
+  }
+
+  & > * {
+    flex-shrink: 0;
+    scroll-snap-align: center;
+  }
+
+  & > picture {
+    transform: translateZ(0);
+  }
+}
