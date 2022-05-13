@@ -1,12 +1,17 @@
 ---
 import Intro from '../slyds/Intro.astro'
 
-import Overflow from '../slyds/review/Overflow.astro'
-import HorizontalOverflow from '../slyds/review/HorizontalOverflow.astro'
-import VerticalOverflow from '../slyds/review/VerticalOverflow.astro'
+import OverflowTitle from '../slyds/review/Title.astro'
+import ClippingOverflow from '../slyds/review/Clipping.astro'
+import HorizontalOverflow from '../slyds/review/Horizontal.astro'
+import VerticalOverflow from '../slyds/review/Vertical.astro'
 import XandY from '../slyds/review/XandY.astro'
-import Touch from '../slyds/review/Touch.astro'
-import SnapType from '../slyds/review/SnapType.astro'
+import Glossary from '../slyds/review/Glossary.astro'
+
+import BasicsTitle from '../slyds/basics/Title.astro'
+import BasicHorizontal from '../slyds/basics/Horizontal.astro'
+import BasicVertical from '../slyds/basics/Vertical.astro'
+import StopVertical from '../slyds/basics/VerticalStop.astro'
 ---
 
 <script>
@@ -36,12 +41,19 @@ import SnapType from '../slyds/review/SnapType.astro'
     </slyd-group>
 
     <slyd-group>
-    	<Overflow />
+    	<OverflowTitle />
+    	<ClippingOverflow />
     	<HorizontalOverflow />
     	<VerticalOverflow />
     	<XandY />
-    	<Touch />
-    	<SnapType />
+    	<Glossary />
+    </slyd-group>
+
+    <slyd-group>
+    	<BasicsTitle />
+    	<BasicHorizontal />
+    	<BasicVertical />
+    	<StopVertical />
     </slyd-group>
 
   </slyds>
