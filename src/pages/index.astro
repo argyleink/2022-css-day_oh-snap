@@ -14,6 +14,14 @@ import BasicHorizontal from '../slyds/basics/Horizontal.astro'
 import BasicVertical from '../slyds/basics/Vertical.astro'
 import StopVertical from '../slyds/basics/VerticalStop.astro'
 import Matrix from '../slyds/basics/Matrix.astro'
+
+import SnapMeta from '../slyds/meta/Title.astro'
+import OverscrollBehavior from '../slyds/meta/OverscrollBehavior.astro'
+import ScrollPadding from '../slyds/meta/ScrollPadding.astro'
+import ScrollMargin from '../slyds/meta/ScrollMargin.astro'
+import ScrollIntoView from '../slyds/meta/ScrollIntoView.astro'
+import SnapAfterLayout from '../slyds/meta/SnapAfterLayout.astro'
+import DevTools from '../slyds/meta/DevTools.astro'
 ---
 
 <script>
@@ -60,6 +68,16 @@ import Matrix from '../slyds/basics/Matrix.astro'
     	<Matrix />
     	<StopVertical />
     </slyd-group>
+
+		<slyd-group>
+			<SnapMeta />
+			<OverscrollBehavior />
+			<ScrollPadding />
+			<ScrollMargin />
+			<ScrollIntoView />
+			<SnapAfterLayout />
+			<DevTools />
+		</slyd-group>
 
   </slyds>
 </body>

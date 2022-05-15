@@ -5,6 +5,7 @@ slyd-scrollport {
   max-block-size: 100%;
   box-sizing: border-box;
   background: hsl(var(--hue) var(--saturation) 4%);
+  border: 1px solid var(--brand-color-3);
 
   display: flex;
   gap: var(--size-5);
