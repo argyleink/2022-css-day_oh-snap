@@ -14,8 +14,10 @@ import Prism from '/src/utils/Prism.astro'
         }
       }
     `}/>
-    <slyd-scrollport class="vertical snap-y">
-      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <slyd-scrollport class="tall vertical snap-y-prox">
+      {[...Array(10)].map(() => ( 
+        <div></div> 
+      ))}  
     </slyd-scrollport>
   </demo-stage>
 </slyd>

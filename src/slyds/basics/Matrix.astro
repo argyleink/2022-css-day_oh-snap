@@ -1,0 +1,23 @@
+---
+import Prism from '/src/utils/Prism.astro'
+---
+
+<slyd id="matrix">
+  <h2>Matrix</h2>
+  <demo-stage>
+    <Prism lang='css' code={`
+      .snap-both-axis {
+        scroll-snap-type: both mandatory;
+      }
+
+      .snap-both-axis > * {
+        scroll-snap-align: center;
+      }
+    `}/>
+    <slyd-scrollport class="both snap-both snap-stop">
+      {[...Array(12)].map(() => ( 
+        <div></div> 
+      ))}
+    </slyd-scrollport>
+  </demo-stage>
+</slyd>

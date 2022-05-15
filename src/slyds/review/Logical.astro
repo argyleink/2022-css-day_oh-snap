@@ -1,0 +1,29 @@
+---
+import Prism from '/src/utils/Prism.astro'
+---
+
+<slyd id="logical-overflow">
+  <h2 class="lg-codeblock-adjust">Logical Axis</h2>
+  <small>Firefox Only</small>
+  <demo-stage>
+    <Prism lang='css' code={`
+      .scroll-block {
+        overflow-block: auto;
+      }
+    `}/>
+    <slyd-scrollport class="vertical">
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    </slyd-scrollport>
+  </demo-stage>
+
+  <demo-stage>
+    <Prism lang='css' code={`
+      .scroll-inline {
+        overflow-inline: auto;
+      }
+    `}/>
+    <slyd-scrollport class="horizontal">
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    </slyd-scrollport>
+  </demo-stage>
+</slyd>

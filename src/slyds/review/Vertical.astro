@@ -11,7 +11,9 @@ import Prism from '/src/utils/Prism.astro'
       }
     `}/>
     <slyd-scrollport class="vertical">
-      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      {[...Array(10)].map(() => ( 
+        <div></div> 
+      ))}  
     </slyd-scrollport>
   </demo-stage>
 
@@ -23,7 +25,9 @@ import Prism from '/src/utils/Prism.astro'
       }
     `}/>
     <slyd-scrollport class="vertical rtl">
-      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      {[...Array(10)].map(() => ( 
+        <div></div> 
+      ))}
     </slyd-scrollport>
   </demo-stage>
 </slyd>

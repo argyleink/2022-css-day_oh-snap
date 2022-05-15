@@ -5,6 +5,7 @@ import OverflowTitle from '../slyds/review/Title.astro'
 import ClippingOverflow from '../slyds/review/Clipping.astro'
 import HorizontalOverflow from '../slyds/review/Horizontal.astro'
 import VerticalOverflow from '../slyds/review/Vertical.astro'
+import LogicalOverflow from '../slyds/review/Logical.astro'
 import XandY from '../slyds/review/XandY.astro'
 import Glossary from '../slyds/review/Glossary.astro'
 
@@ -12,15 +13,16 @@ import BasicsTitle from '../slyds/basics/Title.astro'
 import BasicHorizontal from '../slyds/basics/Horizontal.astro'
 import BasicVertical from '../slyds/basics/Vertical.astro'
 import StopVertical from '../slyds/basics/VerticalStop.astro'
+import Matrix from '../slyds/basics/Matrix.astro'
 ---
 
 <script>
 	import "slyd"
 </script>
 
-<style is:global>
+<!-- <style is:global>
 	@import "/src/styles/index.css";
-</style>
+</style> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,6 +32,7 @@ import StopVertical from '../slyds/basics/VerticalStop.astro'
 	<meta name="theme-color" content="#000000">
 
 	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="/src/styles/index.css">
 
 	<title>CSS Day 2022</title>
 </head>
@@ -45,6 +48,7 @@ import StopVertical from '../slyds/basics/VerticalStop.astro'
     	<ClippingOverflow />
     	<HorizontalOverflow />
     	<VerticalOverflow />
+			<LogicalOverflow />
     	<XandY />
     	<Glossary />
     </slyd-group>
@@ -53,6 +57,7 @@ import StopVertical from '../slyds/basics/VerticalStop.astro'
     	<BasicsTitle />
     	<BasicHorizontal />
     	<BasicVertical />
+    	<Matrix />
     	<StopVertical />
     </slyd-group>
 

@@ -10,11 +10,23 @@ code-gallery > pre {
 .vertical {
   flex-direction: column;
   justify-self: flex-start;
+
+  &.tall {
+    min-block-size: 45vh;
+  }
 }
 
 .both {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+}
+
+.snap-both {
+  scroll-snap-type: both mandatory;
+
+  & > * {
+    scroll-snap-align: center;
+  }
 }
 
 .snap-x {
@@ -35,6 +47,14 @@ code-gallery > pre {
       scroll-snap-stop: always;
     }
   }
+
+  & > * {
+    scroll-snap-align: center;
+  }
+}
+
+.snap-y-prox {
+  scroll-snap-type: y proximity;
 
   & > * {
     scroll-snap-align: center;

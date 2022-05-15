@@ -10,8 +10,10 @@ import Prism from '/src/utils/Prism.astro'
         scroll-snap-stop: always;
       }
     `}/>
-    <slyd-scrollport class="vertical snap-y snap-stop">
-      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <slyd-scrollport class="tall vertical snap-y snap-stop">
+      {[...Array(10)].map(() => ( 
+        <div></div> 
+      ))}
     </slyd-scrollport>
   </demo-stage>
 </slyd>

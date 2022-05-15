@@ -1,9 +1,9 @@
 demo-stage {
   display: grid;
-  gap: var(--size-6);
-  grid-auto-columns: 1fr;
+  gap: var(--size-fluid-7);
+  grid-auto-columns: auto;
   grid-auto-flow: column;
-  align-items: center;
+  place-content: center;
 
   max-inline-size: 90vw;
   inline-size: 100%;
