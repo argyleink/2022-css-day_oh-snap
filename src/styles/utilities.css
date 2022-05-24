@@ -61,6 +61,10 @@ code-gallery > pre {
   }
 }
 
+.snap-stop > * {
+  scroll-snap-stop: always;
+}
+
 .rtl {
   direction: rtl;
 }

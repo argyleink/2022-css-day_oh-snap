@@ -1,6 +1,4 @@
 ---
-import Intro from '../slyds/Intro.astro'
-
 import OverflowTitle from '../slyds/review/Title.astro'
 import ClippingOverflow from '../slyds/review/Clipping.astro'
 import HorizontalOverflow from '../slyds/review/Horizontal.astro'
@@ -14,14 +12,17 @@ import BasicHorizontal from '../slyds/basics/Horizontal.astro'
 import BasicVertical from '../slyds/basics/Vertical.astro'
 import StopVertical from '../slyds/basics/VerticalStop.astro'
 import Matrix from '../slyds/basics/Matrix.astro'
+import StopMatrix from '../slyds/basics/MatrixStop.astro'
 
-import SnapMeta from '../slyds/meta/Title.astro'
+import AdvancedSnap from '../slyds/meta/Title.astro'
 import OverscrollBehavior from '../slyds/meta/OverscrollBehavior.astro'
 import ScrollPadding from '../slyds/meta/ScrollPadding.astro'
 import ScrollMargin from '../slyds/meta/ScrollMargin.astro'
 import ScrollIntoView from '../slyds/meta/ScrollIntoView.astro'
 import SnapAfterLayout from '../slyds/meta/SnapAfterLayout.astro'
 import DevTools from '../slyds/meta/DevTools.astro'
+
+import SnapTricks from '../slyds/tricks/Title.astro'
 ---
 
 <script>
@@ -47,7 +48,10 @@ import DevTools from '../slyds/meta/DevTools.astro'
 <body>
 	<slyds>
 		<slyd-group>
-    	<Intro />
+    	<slyd id="intro">
+        <h1 uppercase>oh snap!</h1>
+        <h3>Controlled <span highlight>Scroll</span></h3>
+      </slyd>
     </slyd-group>
 
     <slyd-group>
@@ -66,16 +70,40 @@ import DevTools from '../slyds/meta/DevTools.astro'
     	<BasicVertical />
     	<Matrix />
     	<StopVertical />
+    	<StopMatrix />
     </slyd-group>
 
     <slyd-group>
-      <SnapMeta />
+      <AdvancedSnap />
       <OverscrollBehavior />
       <ScrollPadding />
       <ScrollMargin />
       <ScrollIntoView />
       <SnapAfterLayout />
       <DevTools />
+    </slyd-group>
+
+    <slyd-group>
+      <SnapTricks />
+    </slyd-group>
+
+    <slyd-group>
+      <slyd id="css-is-moving-fast">
+        <h2><b class="neon-blue">CSS</b> is</h2>
+        <h1><b class="neon-white">CRUISIN</b></h1>
+      </slyd>
+
+      <slyd id="thank-you">
+        <h2><b class="neon-pink">Thank You</b></h2>
+        <h1 uppercase>CSS <b class="neon-purple">Day</b></h1>
+      </slyd>
+
+      <slyd id="follow-me">
+        <h1><span flipped>🎉</span> <b>CSS</b> 🎉</h1>
+        <p lead>
+          Hear it hot 👉 <a class="neon-green" href="https://twitter.com/argyleink">@argyleink</a>
+        </p>
+      </slyd>
     </slyd-group>
 
   </slyds>

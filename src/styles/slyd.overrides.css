@@ -2,6 +2,10 @@ slyds > slyd-group:not(:last-child) > slyd:last-child::after {
   inset-inline: auto 2vw;
 }
 
+slyd.lg-gap {
+  gap: var(--size-10)
+}
+
 h3, h4, h5, h6 {
   color: var(--text-color-2);
 }

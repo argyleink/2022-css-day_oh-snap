@@ -2,8 +2,8 @@
 import Prism from '/src/utils/Prism.astro'
 ---
 
-<slyd id="matrix" class="lg-gap">
-  <h2>Matrix</h2>
+<slyd id="matrix-stop" class="lg-gap">
+  <h2>Matrix Stops</h2>
   <demo-stage>
     <Prism lang='css' code={`
       .snap-both-axis {
@@ -11,10 +11,10 @@ import Prism from '/src/utils/Prism.astro'
       }
 
       .snap-both-axis > * {
-        scroll-snap-align: center;
+        scroll-snap-stop: always;
       }
     `}/>
-    <slyd-scrollport class="both snap-both">
+    <slyd-scrollport class="both snap-both snap-stop">
       {[...Array(12)].map(() => ( 
         <div></div> 
       ))}
