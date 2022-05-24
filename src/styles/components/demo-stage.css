@@ -8,7 +8,6 @@ demo-stage {
   max-inline-size: 90vw;
   inline-size: 100%;
   max-block-size: 20vw;
-  margin-block-start: var(--size-fluid-4);
 
   @nest slyd > &:first-of-type {
     margin-block-end: var(--size-5);
