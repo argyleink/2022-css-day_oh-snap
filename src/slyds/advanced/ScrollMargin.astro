@@ -1,3 +1,33 @@
+---
+import Prism from '/src/utils/Prism.astro'
+---
+
 <slyd id="scroll-margin">
   <h2>Scroll Margin</h2>
+
+  <demo-stage>
+    <Prism lang='css' code={`
+      .scroll-item-margin {
+        scroll-margin: 1rem; 
+      }
+    `}/>
+    <div class="columns" style="max-block-size: 40vh;">
+      <div class="rows">
+        <h5>No margins</h5>
+        <slyd-scrollport class="tall vertical snap-y-start">
+          {[...Array(10)].map(() => ( 
+            <div></div> 
+          ))}  
+        </slyd-scrollport>
+      </div>
+      <div class="rows">
+        <h5>Margins</h5>
+        <slyd-scrollport class="tall vertical snap-y-start">
+          {[...Array(10)].map(() => ( 
+            <div style="scroll-margin-block-start: var(--size-5)"></div> 
+          ))}  
+        </slyd-scrollport>
+      </div>
+    </div>
+  </demo-stage>
 </slyd>

@@ -45,6 +45,10 @@ code[class*="language-"], pre[class*="language-"] {
   text-shadow: 0 0 .5em #4003e6;
 }
 
+.token.property {
+  text-shadow: 0 0 0.5em hsl(210 100% 30%);
+}
+
 .token.url {
   color: var(--text-1);
 }

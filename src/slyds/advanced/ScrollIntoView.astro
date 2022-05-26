@@ -1,3 +1,24 @@
+---
+import Prism from '/src/utils/Prism.astro'
+---
+
 <slyd id="scroll-intoview">
   <h2>Scroll Into View</h2>
+
+  <demo-stage>
+    <Prism lang='js' code={`
+      Element.scrollIntoView({
+        behavior: 'smooth', 
+        inline:   'center', 
+      })
+    `}/>
+    <div class="rows">
+      <slyd-scrollport class="horizontal snap-x">
+        {[...Array(10)].map(() => ( 
+          <div></div> 
+        ))}  
+      </slyd-scrollport>
+      <button style="justify-self: end" onclick="this.parentNode.querySelector('slyd-scrollport > div:nth-child(5)').scrollIntoView({behavior: 'smooth', inline: 'center'})">scrollIntoView()</button>
+    </div>
+  </demo-stage>
 </slyd>
