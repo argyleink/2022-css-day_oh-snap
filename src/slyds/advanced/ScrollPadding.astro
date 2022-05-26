@@ -1,3 +1,36 @@
+---
+import Prism from '/src/utils/Prism.astro'
+---
+
 <slyd id="scroll-padding">
   <h2>Scroll Padding</h2>
+
+  <demo-stage>
+    <Prism lang='css' code={`
+      .scrollport-padding {
+        --padding: 1rem;
+
+        padding: var(--padding);
+        scroll-padding: var(--padding); 
+      }
+    `}/>
+    <div class="columns" style="max-block-size: 40vh;">
+      <div class="rows">
+        <h5>No padding</h5>
+        <slyd-scrollport class="tall vertical snap-y-start">
+          {[...Array(10)].map(() => ( 
+            <div></div> 
+          ))}  
+        </slyd-scrollport>
+      </div>
+      <div class="rows">
+        <h5>Padding</h5>
+        <slyd-scrollport class="tall vertical snap-y-start" style="scroll-padding: var(--size-5)">
+          {[...Array(10)].map(() => ( 
+            <div></div> 
+          ))}  
+        </slyd-scrollport>
+      </div>
+    </div>
+  </demo-stage>
 </slyd>

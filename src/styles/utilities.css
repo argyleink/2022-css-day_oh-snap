@@ -7,6 +7,16 @@ code-gallery > pre {
   border-radius: var(--radius-3);
 }
 
+.columns {
+  display: flex;
+  gap: var(--size-5);
+}
+
+.rows {
+  display: grid;
+  gap: var(--size-5);
+}
+
 .vertical {
   flex-direction: column;
   justify-self: flex-start;
@@ -80,6 +90,14 @@ code-gallery > pre {
 
   & > * {
     scroll-snap-align: center;
+  }
+}
+
+.snap-y-start {
+  scroll-snap-type: y mandatory;
+
+  & > * {
+    scroll-snap-align: start;
   }
 }
 
