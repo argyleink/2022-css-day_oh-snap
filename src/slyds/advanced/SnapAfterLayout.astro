@@ -1,3 +1,11 @@
 <slyd id="snap-after-layout">
   <h2>Snap After Layout</h2>
+
+  <div style="overflow: hidden; resize: horizontal; padding: 1rem; max-inline-size: 80vw;">
+    <slyd-scrollport class="horizontal snap-x">
+      {[...Array(10)].map(() => ( 
+        <div></div> 
+      ))}  
+    </slyd-scrollport>
+  </div>
 </slyd>
