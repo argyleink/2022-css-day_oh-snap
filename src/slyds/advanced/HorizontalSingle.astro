@@ -1,0 +1,23 @@
+---
+import Prism from '/src/utils/Prism.astro'
+---
+
+<slyd id="single-horizontal" class="lg-gap">
+  <h2>Single Snap</h2>
+  <demo-stage>
+    <Prism lang='css' code={`
+      .snap-x {
+        scroll-snap-type: x mandatory;
+
+        & > :nth-child(5) {
+          scroll-snap-align: center;
+        }
+      }
+    `}/>
+    <slyd-scrollport class="snap-one-x">
+      {[...Array(10)].map(() => ( 
+        <div></div> 
+      ))}
+    </slyd-scrollport>
+  </demo-stage>
+</slyd>

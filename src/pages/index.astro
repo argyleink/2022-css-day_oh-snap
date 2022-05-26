@@ -14,13 +14,17 @@ import StopVertical from '../slyds/basics/VerticalStop.astro'
 import Matrix from '../slyds/basics/Matrix.astro'
 import StopMatrix from '../slyds/basics/MatrixStop.astro'
 
-import AdvancedSnap from '../slyds/meta/Title.astro'
-import OverscrollBehavior from '../slyds/meta/OverscrollBehavior.astro'
-import ScrollPadding from '../slyds/meta/ScrollPadding.astro'
-import ScrollMargin from '../slyds/meta/ScrollMargin.astro'
-import ScrollIntoView from '../slyds/meta/ScrollIntoView.astro'
-import SnapAfterLayout from '../slyds/meta/SnapAfterLayout.astro'
-import DevTools from '../slyds/meta/DevTools.astro'
+import AdvancedSnap from '../slyds/advanced/Title.astro'
+import SingleHorizontal from '../slyds/advanced/HorizontalSingle.astro'
+import NestedHorizontal from '../slyds/advanced/HorizontalNested.astro'
+import OverscrollBehavior from '../slyds/advanced/OverscrollBehavior.astro'
+import ScrollPadding from '../slyds/advanced/ScrollPadding.astro'
+import ScrollMargin from '../slyds/advanced/ScrollMargin.astro'
+import ScrollIntoView from '../slyds/advanced/ScrollIntoView.astro'
+import SnapAfterLayout from '../slyds/advanced/SnapAfterLayout.astro'
+import DevTools from '../slyds/advanced/DevTools.astro'
+import RecapScrollport from '../slyds/advanced/RecapScrollport.astro'
+import RecapScrollItem from '../slyds/advanced/RecapScrollItem.astro'
 
 import SnapTricks from '../slyds/tricks/Title.astro'
 ---
@@ -29,9 +33,9 @@ import SnapTricks from '../slyds/tricks/Title.astro'
 	import "slyd"
 </script>
 
-<style is:global>
+<!--  <style is:global>
 	@import "/src/styles/index.css";
-</style>
+</style> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +45,7 @@ import SnapTricks from '../slyds/tricks/Title.astro'
 	<meta name="theme-color" content="#000000">
 
 	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-	<!-- <link rel="stylesheet" href="/src/styles/index.css"> -->
+	<link rel="stylesheet" href="/src/styles/index.css">
 
 	<title>CSS Day 2022</title>
 </head>
@@ -50,7 +54,7 @@ import SnapTricks from '../slyds/tricks/Title.astro'
 		<slyd-group>
     	<slyd id="intro">
         <h1 uppercase>oh snap!</h1>
-        <h3>Controlled <span highlight>Scroll</span></h3>
+        <h3>Guiding <span highlight>Scroll</span></h3>
       </slyd>
     </slyd-group>
 
@@ -75,12 +79,16 @@ import SnapTricks from '../slyds/tricks/Title.astro'
 
     <slyd-group>
       <AdvancedSnap />
+    	<SingleHorizontal />
+    	<NestedHorizontal />
       <OverscrollBehavior />
       <ScrollPadding />
       <ScrollMargin />
       <ScrollIntoView />
       <SnapAfterLayout />
       <DevTools />
+      <RecapScrollport />
+      <RecapScrollItem />
     </slyd-group>
 
     <slyd-group>
@@ -96,13 +104,6 @@ import SnapTricks from '../slyds/tricks/Title.astro'
       <slyd id="thank-you">
         <h2><b class="neon-pink">Thank You</b></h2>
         <h1 uppercase>CSS <b class="neon-purple">Day</b></h1>
-      </slyd>
-
-      <slyd id="follow-me">
-        <h1><span flipped>🎉</span> <b>CSS</b> 🎉</h1>
-        <p lead>
-          Hear it hot 👉 <a class="neon-green" href="https://twitter.com/argyleink">@argyleink</a>
-        </p>
       </slyd>
     </slyd-group>
 

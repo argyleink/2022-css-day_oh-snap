@@ -1,0 +1,25 @@
+---
+import Prism from '/src/utils/Prism.astro'
+---
+
+<slyd id="nested-horizontal" class="lg-gap">
+  <h2>Indirect Snap</h2>
+  <demo-stage>
+    <Prism lang='css' code={`
+      .snap-x {
+        scroll-snap-type: x mandatory;
+
+        & > .some > .nested > .child {
+          scroll-snap-align: center;
+        }
+      }
+    `}/>
+    <slyd-scrollport class="snap-nested-x">
+      {[...Array(10)].map(() => ( 
+        <div>
+          <span>🤘💀</span>
+        </div> 
+      ))}
+    </slyd-scrollport>
+  </demo-stage>
+</slyd>

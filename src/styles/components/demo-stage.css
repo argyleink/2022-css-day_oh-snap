@@ -4,6 +4,7 @@ demo-stage {
   grid-auto-columns: auto;
   grid-auto-flow: column;
   place-content: center;
+  align-items: center;
 
   max-inline-size: 90vw;
   inline-size: 100%;

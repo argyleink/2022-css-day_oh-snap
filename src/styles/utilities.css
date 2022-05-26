@@ -18,7 +18,7 @@ code-gallery > pre {
 
 .both {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
 }
 
 .snap-both {
@@ -30,10 +30,32 @@ code-gallery > pre {
 }
 
 .snap-x {
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory; 
 
   & > * {
     scroll-snap-align: center;
+  }
+}
+
+.snap-one-x {
+  scroll-snap-type: x mandatory; 
+
+  & > :nth-child(5) {
+    scroll-snap-align: center; 
+  }
+}
+
+.snap-nested-x {
+  scroll-snap-type: x mandatory; 
+
+  & > div {
+    &:nth-of-type(even) {text-align: start}
+    &:nth-of-type(odd) {text-align: end}
+
+    & > span {
+      display: inline-block;
+      scroll-snap-align: center; 
+    }
   }
 }
 
