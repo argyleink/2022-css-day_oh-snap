@@ -1,3 +1,17 @@
+---
+import Prism from '/src/utils/Prism.astro'
+---
+
 <slyd id="overscroll-behavior">
-  <h2>Overscroll Behavior</h2>
+  <h2>Trapping Scroll</h2>
+
+  <Prism lang='css' code={`
+    .hungry-overscroll-monster {
+      overscroll-behavior: contain;
+      overscroll-behavior: auto contain;
+      overscroll-behavior-x: contain;
+      overscroll-behavior-y: contain;
+      overscroll-behavior-inline: 😅; 
+    }
+  `}/>
 </slyd>
