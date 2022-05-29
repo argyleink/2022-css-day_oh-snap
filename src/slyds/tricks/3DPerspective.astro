@@ -1,0 +1,17 @@
+---
+import Prism from '/src/utils/Prism.astro'
+---
+
+<slyd id="3d-perspective">
+  <h2>3D Perspective</h2>
+  <demo-stage>
+    <Prism lang='css' code={`
+      
+    `}/>
+    <slyd-scrollport class="horizontal snap-x">
+      {[...Array(10)].map(() => ( 
+        <div></div> 
+      ))}
+    </slyd-scrollport>
+  </demo-stage>
+</slyd>
