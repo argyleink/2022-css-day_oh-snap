@@ -3,15 +3,23 @@ import Prism from '/src/utils/Prism.astro'
 ---
 
 <slyd id="starter-kit">
-  <h2>Starter Kit</h2>
-  <demo-stage>
+  <h2>Slides Starter Kit</h2>
+  <demo-stage style="max-block-size: 50vh;">
     <Prism lang='css' code={`
-      
+      .scrollport {
+        scroll-snap-type: y mandatory;
+      }
+
+      .scroll-item {
+        min-block-size: 100vh;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+      }
     `}/>
-    <slyd-scrollport class="horizontal snap-x">
-      {[...Array(10)].map(() => ( 
-        <div></div> 
+    <div class="slide-starter-kit">
+      {[...Array(10)].map((x, i) => ( 
+        <section>slide {i}</section> 
       ))}
-    </slyd-scrollport>
+    </div>
   </demo-stage>
 </slyd>

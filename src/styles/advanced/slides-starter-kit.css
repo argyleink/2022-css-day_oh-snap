@@ -1,0 +1,29 @@
+.slide-starter-kit {
+  --_slide-size: 35vh;
+
+  block-size: var(--_slide-size);
+  inline-size: 25vw;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: y mandatory;
+
+  & > section {
+    min-block-size: var(--_slide-size);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:nth-of-type(even) {
+      color: var(--grape-0);
+      background: var(--grape-7);
+    }
+
+    &:nth-of-type(odd) {
+      color: var(--pink-0);
+      background: var(--pink-5);
+    }
+  }
+}

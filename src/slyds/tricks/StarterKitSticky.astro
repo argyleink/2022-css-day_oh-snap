@@ -3,15 +3,18 @@ import Prism from '/src/utils/Prism.astro'
 ---
 
 <slyd id="sticky-starter-kit">
-  <h2>Add Sticky!</h2>
+  <h2>Sticky Starter</h2>
   <demo-stage>
     <Prism lang='css' code={`
-      
+      .scroll-item {
+        position: sticky;
+        top: 0;
+      }
     `}/>
-    <slyd-scrollport class="horizontal snap-x">
-      {[...Array(10)].map(() => ( 
-        <div></div> 
+    <div class="sticky-slide-starter-kit">
+      {[...Array(10)].map((x, i) => ( 
+        <section>slide {i}</section> 
       ))}
-    </slyd-scrollport>
+    </div>
   </demo-stage>
 </slyd>

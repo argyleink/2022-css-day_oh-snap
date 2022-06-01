@@ -1,0 +1,43 @@
+.perspective-starter-kit {
+  --_slide-size: 35vh;
+
+  perspective: 10px;
+  perspective-origin: center center;
+  block-size: var(--_slide-size);
+  inline-size: 25vw;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: y mandatory;
+
+  & > section {
+    min-block-size: var(--_slide-size);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:nth-of-type(even) {
+      color: var(--blue-0);
+      background: var(--blue-6);
+    }
+
+    &:nth-of-type(odd) {
+      color: var(--cyan-0);
+      background: var(--cyan-5);
+    }
+
+    &:nth-child(1) > p { transform: translateZ(4px) }
+    &:nth-child(2) > p { transform: translateZ(5px) }
+    &:nth-child(3) > p { transform: translateZ(6px) }
+    &:nth-child(4) > p { transform: translateZ(7px) }
+    &:nth-child(5) > p { transform: translateZ(8px) }
+    &:nth-child(6) > p { transform: translateZ(9px) }
+  }
+}
+
+.perspective-starter-kit,
+.perspective-starter-kit > section {
+  transform-style: preserve-3d;
+}

@@ -4,14 +4,27 @@ import Prism from '/src/utils/Prism.astro'
 
 <slyd id="3d-perspective">
   <h2>3D Perspective</h2>
-  <demo-stage>
+  <demo-stage style="max-block-size: 55vh;">
     <Prism lang='css' code={`
-      
+      .scrollport {
+        perspective: 10px;
+        perspective-origin: center center;
+      }
+
+      .scrollport, .scroll-item {
+        transform-style: preserve-3d;
+      }
+
+      .scroll-item > p {
+        transform: translateZ(-5px);
+      }
     `}/>
-    <slyd-scrollport class="horizontal snap-x">
-      {[...Array(10)].map(() => ( 
-        <div></div> 
+    <div class="perspective-starter-kit">
+      {[...Array(6)].map((x, i) => ( 
+        <section>
+          <p>slide {i}</p>
+        </section> 
       ))}
-    </slyd-scrollport>
+    </div>
   </demo-stage>
 </slyd>

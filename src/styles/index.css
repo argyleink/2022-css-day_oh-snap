@@ -1,4 +1,4 @@
-@layer libraries, overrides, slides;
+@layer libraries, overrides, slides, tricks;
 
 @import "slyd" layer(libraries);
 
@@ -9,3 +9,7 @@
 @import "./components/code-gallery.css" layer(slides);
 @import "./components/demo-stage.css" layer(slides);
 @import "./components/slyd-scrollport.css" layer(slides);
+
+@import "./advanced/slides-starter-kit.css" layer(tricks);
+@import "./advanced/sticky-slide-starter-kit.css" layer(tricks);
+@import "./advanced/perspective-starter-kit.css" layer(tricks);
