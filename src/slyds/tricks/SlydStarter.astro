@@ -5,13 +5,26 @@ import Prism from '/src/utils/Prism.astro'
 <slyd id="slyd-starter">
   <h2>Slyd Starter</h2>
   <demo-stage>
-    <Prism lang='css' code={`
-      
+    <Prism lang='html' code={`
+      <style>
+        @import "https://unpkg.com/slyd/dist/slyd.css";
+      </style>
+
+      <script>
+        import "https://unpkg.com/slyd";
+      </script>
     `}/>
-    <slyd-scrollport class="horizontal snap-x">
-      {[...Array(10)].map(() => ( 
-        <div></div> 
-      ))}
+    <slyds class="nested-slyds-demo">
+      <slyd-group>
+        <slyd>Group A, Slide 1</slyd>
+        <slyd>Group A, Slide 2</slyd>
+        <slyd>Group A, Slide 3</slyd>
+      </slyd-group>
+      <slyd-group>
+        <slyd>Group B, Slide 1</slyd>
+        <slyd>Group B, Slide 2</slyd>
+        <slyd>Group B, Slide 3</slyd>
+      </slyd-group>
     </slyd-scrollport>
   </demo-stage>
 </slyd>

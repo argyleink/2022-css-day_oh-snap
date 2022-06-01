@@ -1,0 +1,27 @@
+.nested-slyds-demo {
+  --_inline-size: 25vw;
+  --_block-size: 20vw;
+
+  inline-size: var(--_inline-size);
+  block-size: var(--_block-size);
+
+  & > slyd-group {
+    max-inline-size: var(--_inline-size);
+    max-block-size: var(--_block-size);
+    grid-auto-rows: var(--_block-size); 
+    grid-template-columns: var(--_inline-size);
+
+    & > slyd {
+      inline-size: var(--_inline-size);
+      block-size: var(--_block-size);
+
+      &:first-child:after {
+        left: calc(13vw - .5em);
+      }
+
+      &:last-child:after {
+        bottom: calc(17vh - .5em);
+      }
+    }
+  }
+}
