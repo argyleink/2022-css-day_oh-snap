@@ -4,14 +4,21 @@ import Prism from '/src/utils/Prism.astro'
 
 <slyd id="infinite-scroll">
   <h2>Infinite Scroll</h2>
-  <demo-stage>
-    <Prism lang='css' code={`
-      
+  <demo-stage style="max-block-size: 55vh;">
+    <Prism lang='js' code={`
+      IntersectionObserver(nodes => {
+        const [active] = nodes.filter(node => 
+          node.isIntersecting)
+        if (!active) return
+        let parent = active.target.parentElement
+        if (active.target === parent.lastElementChild)
+          parent.firstElementChild.scrollIntoView()
+      }, {
+        root: scrollPort
+      })
     `}/>
-    <slyd-scrollport class="horizontal snap-x">
-      {[...Array(10)].map(() => ( 
-        <div></div> 
-      ))}
-    </slyd-scrollport>
+    <div class="infinite-scroll">
+      <div>this</div><div>carousel</div><div>never</div><div>ends</div><div>this</div>
+    </div>
   </demo-stage>
 </slyd>

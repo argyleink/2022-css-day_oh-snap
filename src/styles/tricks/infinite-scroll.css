@@ -1,0 +1,17 @@
+.infinite-scroll {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  border: 1px solid var(--brand-color-3);
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  grid-template-rows: 35vh;
+
+  & > div {
+    scroll-snap-align: center;
+    display: grid;
+    place-content: center;
+  }
+}

@@ -10,12 +10,13 @@
 @import "./components/demo-stage.css" layer(slides);
 @import "./components/slyd-scrollport.css" layer(slides);
 
-@import "./advanced/slides-starter-kit.css" layer(tricks);
-@import "./advanced/sticky-slide-starter-kit.css" layer(tricks);
-@import "./advanced/perspective-starter-kit.css" layer(tricks);
-@import "./advanced/nested-slyds-demo.css" layer(tricks);
-@import "./advanced/tap-to-snap.css" layer(tricks);
-@import "./advanced/auto-forward.css" layer(tricks);
+@import "./tricks/slides-starter-kit.css" layer(tricks);
+@import "./tricks/sticky-slide-starter-kit.css" layer(tricks);
+@import "./tricks/perspective-starter-kit.css" layer(tricks);
+@import "./tricks/nested-slyds-demo.css" layer(tricks);
+@import "./tricks/tap-to-snap.css" layer(tricks);
+@import "./tricks/auto-forward.css" layer(tricks);
+@import "./tricks/infinite-scroll.css" layer(tricks);
 
 @media (prefers-reduced-motion: no-preference) {
   :focus-visible {
