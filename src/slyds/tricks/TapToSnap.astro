@@ -6,11 +6,18 @@ import Prism from '/src/utils/Prism.astro'
   <h2>Tap to Snap</h2>
   <demo-stage>
     <Prism lang='css' code={`
-      
+      .scrollport {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+      }
+
+      .scroll-item:is(:active, :focus) {
+        scroll-snap-align: center;
+      }
     `}/>
-    <slyd-scrollport class="horizontal snap-x">
+    <slyd-scrollport class="horizontal tap-to-snap">
       {[...Array(10)].map(() => ( 
-        <div></div> 
+        <div tabindex=0></div> 
       ))}
     </slyd-scrollport>
   </demo-stage>

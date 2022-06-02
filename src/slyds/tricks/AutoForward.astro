@@ -3,15 +3,28 @@ import Prism from '/src/utils/Prism.astro'
 ---
 
 <slyd id="auto-forward">
-  <h2>Auto Forward</h2>
-  <demo-stage>
+  <header>
+    <h2>Auto Forward</h2>
+    <p>By Christian Schaefer</p>
+  </header>
+  <demo-stage style="max-block-size: 50vh;">
     <Prism lang='css' code={`
-      
+      @keyframes snap {
+        96% {
+          scroll-snap-align: center;
+        }
+        100% {
+          scroll-snap-align: center;
+        }
+      }
     `}/>
-    <slyd-scrollport class="horizontal snap-x">
-      {[...Array(10)].map(() => ( 
-        <div></div> 
+    <div class="auto-forward">
+      {[...Array(3)].map((x, i) => ( 
+        <section class="auto-forward-slide">
+          <div class="auto-forward-sentinel"></div>
+          slide {i}
+        </section> 
       ))}
-    </slyd-scrollport>
+    </div>
   </demo-stage>
 </slyd>

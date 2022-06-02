@@ -1,0 +1,12 @@
+.tap-to-snap {
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  & > div {
+    cursor: pointer;
+
+    &:is(:active, :focus) {
+      scroll-snap-align: center;
+    }
+  }
+}

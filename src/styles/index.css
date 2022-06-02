@@ -14,3 +14,18 @@
 @import "./advanced/sticky-slide-starter-kit.css" layer(tricks);
 @import "./advanced/perspective-starter-kit.css" layer(tricks);
 @import "./advanced/nested-slyds-demo.css" layer(tricks);
+@import "./advanced/tap-to-snap.css" layer(tricks);
+@import "./advanced/auto-forward.css" layer(tricks);
+
+@media (prefers-reduced-motion: no-preference) {
+  :focus-visible {
+    transition: outline-offset 145ms var(--ease-2);
+  }
+  :where(:not(:active)):focus-visible {
+    transition-duration: .25s;
+  }
+}
+
+:where(:not(:active)):focus-visible {
+  outline-offset: 5px;
+}

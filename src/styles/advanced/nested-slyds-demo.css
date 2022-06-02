@@ -4,6 +4,10 @@
 
   inline-size: var(--_inline-size);
   block-size: var(--_block-size);
+  grid-auto-columns: var(--_inline-size);
+  grid-template-rows: var(--_block-size);
+  
+  border: 1px solid var(--brand-color-3);
 
   & > slyd-group {
     max-inline-size: var(--_inline-size);

@@ -1,0 +1,92 @@
+@keyframes slide {
+  75% {
+    top: 0
+  }
+  95% {
+    top: 100%
+  }
+  98% {
+    top: 100%
+  }
+  99% {
+    top: 0
+  }
+}
+
+@keyframes slide-restart {
+  75% {
+    top: 0
+  }
+  95% {
+    top: -200%
+  }
+  98% {
+    top: -200%
+  }
+  99% {
+    top: 0
+  }
+}
+
+@keyframes snap-toggle {
+  96% {
+    scroll-snap-align: start;
+  }
+  97% {
+    scroll-snap-align: none;
+  }
+  99% {
+    scroll-snap-align: none;
+  }
+  100% {
+    scroll-snap-align: start;
+  }
+}
+
+.auto-forward {
+  --_slide-size: 35vh;
+
+  block-size: var(--_slide-size);
+  inline-size: 25vw;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: y mandatory;
+}
+
+.auto-forward-slide {
+  position: relative;
+  min-block-size: var(--_slide-size);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:nth-of-type(even) {
+    color: var(--grape-0);
+    background: var(--grape-7);
+  }
+
+  &:nth-of-type(odd) {
+    color: var(--pink-0);
+    background: var(--pink-5);
+  }
+
+  &:last-of-type > .auto-forward-sentinel {
+    animation: 
+      slide-restart 3s ease infinite,
+      snap-toggle 3s ease infinite
+    ;
+  }
+}
+
+.auto-forward-sentinel {
+  position: absolute;
+  inset: 0;
+  scroll-snap-align: start;
+  /* scroll-snap-stop: always; */
+
+  animation: 
+    slide 3s ease infinite,
+    snap-toggle 3s ease infinite
+  ;
+}
