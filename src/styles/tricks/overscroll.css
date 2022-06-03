@@ -1,0 +1,47 @@
+.overscroll-demo {
+  overflow: auto;
+  overscroll-behavior: contain;
+  scroll-snap-type: x mandatory;
+  max-inline-size: 100%;
+  max-block-size: 100%;
+  box-sizing: border-box;
+  background: hsl(var(--hue) var(--saturation) 4%);
+  border: 1px solid var(--brand-color-3);
+
+  display: flex;
+  gap: var(--size-5);
+  padding: var(--size-5);
+  scroll-padding-inline: var(--size-5);
+  align-items: center;
+
+  & > :not(.overscroller) {
+    block-size: 25vmin;
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-3);
+    scroll-snap-align: start;
+
+    &:nth-child(12n+1) { background: var(--indigo-4) }
+    &:nth-child(12n+2) { background: var(--violet-4) }
+    &:nth-child(12n+3) { background: var(--grape-4) }
+    &:nth-child(12n+4) { background: var(--pink-4) }
+    &:nth-child(12n+5) { background: var(--red-4) }
+    &:nth-child(12n+6) { background: var(--orange-4) }
+    &:nth-child(12n+7) { background: var(--yellow-4) }
+    &:nth-child(12n+8) { background: var(--lime-4) }
+    &:nth-child(12n+9) { background: var(--green-4) }
+    &:nth-child(12n+10) { background: var(--teal-4) }
+    &:nth-child(12n+11) { background: var(--cyan-4) }
+    &:nth-child(12n+12) { background: var(--blue-4) }
+
+    &:nth-of-type(10),
+    &:nth-of-type(11) {
+      scroll-snap-align: end;
+    }
+  }
+}
+
+.overscroller {
+  inline-size: 20vw;
+  flex-shrink: 0;
+}

@@ -17,6 +17,8 @@
 @import "./tricks/tap-to-snap.css" layer(tricks);
 @import "./tricks/auto-forward.css" layer(tricks);
 @import "./tricks/infinite-scroll.css" layer(tricks);
+@import "./tricks/smart.css" layer(tricks);
+@import "./tricks/overscroll.css" layer(tricks);
 
 @media (prefers-reduced-motion: no-preference) {
   :focus-visible {

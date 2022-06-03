@@ -6,12 +6,16 @@ import Prism from '/src/utils/Prism.astro'
   <h2>Overscroll Effect</h2>
   <demo-stage>
     <Prism lang='css' code={`
-      
+      .scrollport > :not(.overscroller) {
+        scroll-snap-align: start;
+      }
     `}/>
-    <slyd-scrollport class="horizontal snap-x">
+    <div class="overscroll-demo">
+      <div class="overscroller"></div>
       {[...Array(10)].map(() => ( 
         <div></div> 
       ))}
-    </slyd-scrollport>
+      <div class="overscroller"></div>
+    </div>
   </demo-stage>
 </slyd>
