@@ -19,6 +19,9 @@
 @import "./tricks/infinite-scroll.css" layer(tricks);
 @import "./tricks/smart.css" layer(tricks);
 @import "./tricks/overscroll.css" layer(tricks);
+@import "./tricks/pull-to-refresh.css" layer(tricks);
+@import "./tricks/scroll-start.css" layer(tricks);
+@import "./tricks/scroll-linked-tabs.css" layer(tricks);
 
 @media (prefers-reduced-motion: no-preference) {
   :focus-visible {

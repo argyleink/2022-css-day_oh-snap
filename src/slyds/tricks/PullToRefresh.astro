@@ -6,12 +6,27 @@ import Prism from '/src/utils/Prism.astro'
   <h2>Pull To Refresh</h2>
   <demo-stage>
     <Prism lang='css' code={`
-      
+      // tiny snap point at top of refresh el
+      // delayed snap point on tiny el
+      // scrollend checks scrollTop to be 0
+      // set loading attribute
+      // wait for fetch()
+      // scrollIntoView() main
+      // ScrollTimeline for flare
     `}/>
-    <slyd-scrollport class="horizontal snap-x">
-      {[...Array(10)].map(() => ( 
-        <div></div> 
-      ))}
-    </slyd-scrollport>
+    <div class="pull-to-refresh">
+      <div id="refresh">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+        <span>Pull to refresh</span> 
+      </div>
+      <main id="refresh-main" class="pull-to-refresh-main">
+        <h1>Header</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora laborum illo autem asperiores. Numquam voluptate facilis odit impedit non autem magni architecto, placeat voluptatum dolorem nemo doloremque velit, iure id.</p> 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora laborum illo autem asperiores. Numquam voluptate facilis odit impedit non autem magni architecto, placeat voluptatum dolorem nemo doloremque velit, iure id.</p> 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora laborum illo autem asperiores. Numquam voluptate facilis odit impedit non autem magni architecto, placeat voluptatum dolorem nemo doloremque velit, iure id.</p> 
+      </main>
+    </div>
   </demo-stage>
 </slyd>

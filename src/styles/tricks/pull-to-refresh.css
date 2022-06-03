@@ -1,0 +1,73 @@
+.pull-to-refresh {
+  scroll-snap-type: y mandatory;
+  scroll-snap-stop: always;
+  overscroll-behavior: contain;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  max-block-size: 40vh;
+  border: 1px solid var(--brand-color-3);
+}
+
+.pull-to-refresh-main {
+  scroll-snap-align: start;
+  display: grid;
+  gap: var(--size-5);
+  padding: var(--size-5);
+
+  & > p {
+    text-align: start;
+    font-size: 1.25rem;
+  }
+}
+
+#refresh {
+  block-size: 150px;
+  inline-size: 100%;
+  background: hsl(0 0% 50% / 10%);
+  display: grid;
+  gap: 1ch;
+  align-content: center;
+  justify-items: center;
+  position: relative;
+
+  & > svg {
+    --size: 2.5ch;
+    fill: none;
+    stroke: currentColor;
+    inline-size: var(--size);
+    block-size: var(--size);
+  }
+
+  & > span {
+    font-size: 1.25rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    block-size: 10px;
+    animation: delayed-snap-point 2ms forwards;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    block-size: 5px;
+    background: deeppink;
+    opacity: 0;
+  }
+
+  &[loading-state="loading"]::after {
+    animation: indeterminate-loading 1s ease infinite;
+  }
+}
+
+@keyframes delayed-snap-point {
+  to { scroll-snap-align: start }
+}
+
+@keyframes indeterminate-loading {
+  50% { opacity: 1 }
+}

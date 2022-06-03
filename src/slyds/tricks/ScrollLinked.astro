@@ -3,15 +3,74 @@ import Prism from '/src/utils/Prism.astro'
 ---
 
 <slyd id="scroll-linked">
-  <h2>Scroll Linked</h2>
   <demo-stage>
-    <Prism lang='css' code={`
-      
-    `}/>
-    <slyd-scrollport class="horizontal snap-x">
-      {[...Array(10)].map(() => ( 
-        <div></div> 
-      ))}
-    </slyd-scrollport>
+    <div>
+      <h2>Scroll Linked</h2>
+      <Prism lang='js' code={`
+        new ScrollTimeline({
+          scrollSource: tabsection,
+          orientation: 'inline',
+          fill: 'both',
+        })
+      `}/>
+    </div>
+    <div class="device"> 
+      <main class="tabs">
+        <nav> 
+          <div>
+            <a active href="#responsive">Responsive</a>
+            <a href="#accessible">Accessible</a>
+            <a href="#overscroll">Handles Long Sections</a>
+            <a href="#more">
+              <svg fill="currentColor" viewBox="0 0 20 20" role="presentation" focusable="false">
+                <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
+                </svg>
+            </a>
+          </div>
+          <span class="indicator"></span>
+        </nav>
+        <section>
+          <article id="responsive">
+            <h2>Sit dolor</h2>
+            <p>Lorem ipsum dolor sit amet consectet adipisicing elit</p>
+            <h2>Lore s sdf</h2>
+            <p>Lorem ipsum dolor sit amet consectet adipisicing elit</p>
+            <p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
+            <p>Ipsum, a? Tenetur aut a nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+            <p>nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+            <p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
+            <p>Ipsum, a? Tenetur aut a nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+            <p>nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+          </article>
+          <article id="accessible">
+            <h2>Tenetur</h2>
+            <p>Lorem ipsum dolor sit amet consectet adipisicing elit. Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
+            <h2>Tenet urs</h2>
+            <p>Ipsum, a? Tenetur aut a nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+            <p>nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+            <h2>Lore s sdf</h2>
+            <p>Lorem ipsum dolor sit amet consectet adipisicing elit</p>
+            <p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
+            <p>Ipsum, a? Tenetur aut a nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+            <p>nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+          </article>
+          <article id="overscroll">
+            <h2>Lorems dolor</h2>
+            <p>Lorem ipsum dolor sit amet consectet adipisicing elit</p>
+            <p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
+            <p>nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+          </article>
+          <article id="more">
+            <h2>Lore s sdf</h2>
+            <ul>
+              <li>Lorem</li>
+              <li>ipsum</li>
+              <li>dolor</li>
+            </ul>
+            <p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
+          </article>
+        </section>
+      </main> 
+    </div>
   </demo-stage>
 </slyd>
