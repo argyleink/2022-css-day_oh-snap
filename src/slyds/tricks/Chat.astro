@@ -3,15 +3,71 @@ import Prism from '/src/utils/Prism.astro'
 ---
 
 <slyd id="chat">
-  <h2>Chat</h2>
-  <demo-stage>
-    <Prism lang='css' code={`
+  <demo-stage style="max-block-size: 70vh;">
+    <div style="display:grid; justify-items: start">
+      <h2 style="color: var(--text-1)">Chat</h2>
+      <Prism lang='css' code={`
+        .chat-bubble:last-child {
+          scroll-snap-align: end;
+        }
+      `}/>
+      <textarea id="bot-text" placeholder="Send a message as the bot.."></textarea>
+    </div>
+    <div class="chat-ui">
+      <div class="chat-titlebar">
+        <h5>Chat UI</h5>
+        <div class="chat-avatar">
+          <img src="https://cdn.dribbble.com/users/37530/screenshots/2937858/drib_blink_bot.gif" alt="">
+        </div>
+      </div>
       
-    `}/>
-    <slyd-scrollport class="horizontal snap-x">
-      {[...Array(10)].map(() => ( 
-        <div></div> 
-      ))}
-    </slyd-scrollport>
+      <div class="chat-scrollview">
+        <div class="chat-messagelist">
+          
+          <div class="chat-cluster">
+            <div class="chat-avatar">
+              <img src="https://cdn.dribbble.com/users/37530/screenshots/2937858/drib_blink_bot.gif" alt="">
+            </div>
+            <section>
+              <h3>Snap Bot</h3>
+              <div class="chat-message">Hi!</div>
+              <div class="chat-message">I'm a bot</div>        
+            </section>
+          </div>
+          
+          <div mine class="chat-cluster">
+            <section>
+              <div class="chat-message">Hi!</div>
+              <div class="chat-message">I'm not a bot</div>
+              <div class="chat-message">But I am static text that was put here by a human. The only dynamic stuff you'll find here is whatever someone types in the "say something" text area hehe.</div>
+            </section>
+          </div>
+          
+          <div class="chat-cluster">
+            <div class="chat-avatar">
+              <img src="https://cdn.dribbble.com/users/37530/screenshots/2937858/drib_blink_bot.gif" alt="">
+            </div>
+            <section>
+              <h3>Snap Bot</h3>
+              <div class="chat-message">Makes sense.</div>
+              <div class="chat-message">I see this chat implementation is using scroll snap points?</div>
+              <div class="chat-message">Can you tell me more about that?</div>
+            </section>
+          </div>
+          
+          <div mine class="chat-cluster">
+            <section>
+              <div class="chat-message">sure!</div>
+              <div class="chat-message">scroll-snapping got an update and this is a demo to show the feature.</div>
+              <div class="chat-message">On Chrome 81, all these chats automatically snap to the scroll bottom. In Chrome 80, we'd need to write custom javascript to maintain the position at the bottom.</div>
+              <div class="chat-message">Now CSS can do it!</div>
+            </section>
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="chat-authoring" contenteditable></div>
+    </div>
   </demo-stage>
 </slyd>

@@ -1,0 +1,46 @@
+#stories h2 {
+  text-align: start;
+  color: var(--text-1);
+}
+
+.stories {
+  display: grid;
+  grid: 1fr / auto-flow 100%;
+  gap: 1ch;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior: contain;
+  touch-action: pan-x;
+  inline-size: 320px;
+  block-size: 568px;
+  border-radius: 1ch
+}
+
+.user {
+  /* outer */
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  /* inner */
+  display: grid;
+  grid: [story] 1fr / [story] 1fr;
+}
+
+.story {
+  grid-area: story;
+
+  background-size: cover;
+  background-image: 
+    var(--bg), 
+    linear-gradient(to top, hsl(0 0% 98%), hsl(0 0% 90%));
+
+  user-select: none;
+  touch-action: manipulation;
+
+  transition: opacity .3s cubic-bezier(0.4, 0.0, 1, 1);
+
+  &.seen {
+    opacity: 0;
+    pointer-events: none;
+  }
+}

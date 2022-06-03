@@ -3,15 +3,37 @@ import Prism from '/src/utils/Prism.astro'
 ---
 
 <slyd id="stories">
-  <h2>Stories</h2>
-  <demo-stage>
-    <Prism lang='css' code={`
-      
-    `}/>
-    <slyd-scrollport class="horizontal snap-x">
-      {[...Array(10)].map(() => ( 
-        <div></div> 
-      ))}
-    </slyd-scrollport>
+  <demo-stage style="max-block-size: 50vh">
+    <div>
+      <h2>Stories</h2>
+      <Prism lang='css' code={`
+        .scrollport {
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+        }
+
+        .friend {
+          scroll-snap-align: start;
+          scroll-snap-stop: always;
+        }
+      `}/>
+    </div>
+    <div class="stories"> 
+      <section class="user">
+        <article class="story" style="--bg: url(https://picsum.photos/480/840);"></article> 
+        <article class="story" style="--bg: url(https://picsum.photos/480/841);"></article>
+      </section>
+      <section class="user">
+        <article class="story" style="--bg: url(https://picsum.photos/481/840);"></article>
+      </section>
+      <section class="user">
+        <article class="story" style="--bg: url(https://picsum.photos/481/841);"></article>
+      </section>
+      <section class="user">
+        <article class="story" style="--bg: url(https://picsum.photos/482/840);"></article>
+        <article class="story" style="--bg: url(https://picsum.photos/482/843);"></article>
+        <article class="story" style="--bg: url(https://picsum.photos/482/844);"></article>
+      </section>
+    </div>
   </demo-stage>
 </slyd>

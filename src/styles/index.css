@@ -23,6 +23,9 @@
 @import "./tricks/scroll-start.css" layer(tricks);
 @import "./tricks/scroll-linked-tabs.css" layer(tricks);
 @import "./tricks/date-time-picker.css" layer(tricks);
+@import "./tricks/chat.css" layer(tricks);
+@import "./tricks/stories.css" layer(tricks);
+@import "./tricks/swipe-ui.css" layer(tricks);
 
 @media (prefers-reduced-motion: no-preference) {
   :focus-visible {
