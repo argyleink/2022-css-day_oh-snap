@@ -17,6 +17,8 @@ slyd-scrollport {
     aspect-ratio: 1;
     flex-shrink: 0;
     box-shadow: var(--shadow-3);
+    color: white;
+    text-shadow: 0 1px 0 hsl(0 0% 0% / 25%);
 
     &:nth-child(12n+1) { background: var(--indigo-4) }
     &:nth-child(12n+2) { background: var(--violet-4) }

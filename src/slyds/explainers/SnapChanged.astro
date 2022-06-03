@@ -4,14 +4,12 @@ import Prism from '/src/utils/Prism.astro'
 
 <slyd id="snap-changed">
   <h2>snapChanged()</h2>
-  <demo-stage>
-    <Prism lang='css' code={`
-      
+  <demo-stage style="max-block-size: 50vh">
+    <Prism lang='js' code={`
+      el.onsnapchanged = event => {
+        console.info(event)
+      })
     `}/>
-    <slyd-scrollport class="horizontal snap-x">
-      {[...Array(10)].map(() => ( 
-        <div></div> 
-      ))}
-    </slyd-scrollport>
+    <video src="/snapChanged-twitter.mov" autoplay muted loop loading="lazy" style="height: 50vh"></video>
   </demo-stage>
 </slyd>

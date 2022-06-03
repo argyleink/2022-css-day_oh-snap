@@ -6,12 +6,21 @@ import Prism from '/src/utils/Prism.astro'
   <h2>snapTo()</h2>
   <demo-stage>
     <Prism lang='css' code={`
-      
+      scrollport.scrollTo({
+        left: 'snap-prev',
+        behavior: 'smooth',
+      })
     `}/>
-    <slyd-scrollport class="horizontal snap-x">
-      {[...Array(10)].map(() => ( 
-        <div></div> 
-      ))}
-    </slyd-scrollport>
+    <div class="rows">
+      <slyd-scrollport class="horizontal snap-x">
+        {[...Array(10)].map(() => ( 
+          <div></div> 
+        ))}
+      </slyd-scrollport>
+      <div style="display: flex; justify-self: end; gap: 1rem">
+        <button id="snap-to-prev">scrollToPreviousSnap()</button>
+        <button id="snap-to-next">scrollToNextSnap()</button>
+      </div>
+    </div>
   </demo-stage>
 </slyd>

@@ -6,9 +6,16 @@ import Prism from '/src/utils/Prism.astro'
   <h2>Snap Target</h2>
   <demo-stage>
     <Prism lang='css' code={`
-      
+      :snapped {
+        outline: 1px solid hotpink;
+      }
+
+      :snapped-x {
+        outline: 1px solid hotpink;
+      }
     `}/>
     <slyd-scrollport class="horizontal snap-x">
+      <div class="snapped" style="display:grid;place-content:center">:snapped</div> 
       {[...Array(10)].map(() => ( 
         <div></div> 
       ))}

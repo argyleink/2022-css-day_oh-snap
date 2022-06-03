@@ -4,14 +4,21 @@ import Prism from '/src/utils/Prism.astro'
 
 <slyd id="scroll-start">
   <h2>Scroll Start</h2>
-  <demo-stage>
+  <demo-stage style="max-block-size: 50vh">
     <Prism lang='css' code={`
-      
+      .salmon-block {
+        scroll-start-target-inline: auto;
+      }
+
+      .scrollport {
+        scroll-start: 0 5rem;
+        scroll-start-y: 5rem;
+      }
     `}/>
-    <slyd-scrollport class="horizontal snap-x">
-      {[...Array(10)].map(() => ( 
-        <div></div> 
-      ))}
+    <slyd-scrollport class="horizontal scroll-start-trick">
+      <div></div><div></div><div></div><div></div> 
+      <div style="display:grid;place-content:center;">scroll-start-target</div> 
+      <div></div><div></div><div></div><div></div>
     </slyd-scrollport>
   </demo-stage>
 </slyd>
