@@ -1,0 +1,75 @@
+.picker {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 2ch;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.picker::before,
+.picker::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  background: linear-gradient(
+    var(--surface-1), 
+    65%,
+    hsl(200 20% 10% / 0%)
+  );
+  /*   backdrop-filter: blur(1px); */
+  width: 100%;
+  height: calc(50% - 3.5ex);
+  pointer-events: none;
+}
+
+.picker::after {
+  top: auto;
+  bottom: 0;
+  background: linear-gradient(
+    hsl(200 20% 10% / 0%), 
+    35%, 
+    var(--surface-1)
+  ); 
+}
+
+.picker > * {
+  display: grid;
+  grid-auto-rows: 9vmin;
+  align-items: center;
+  max-block-size: calc(9vmin * 5);
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: y mandatory;
+  padding-inline-end: 1ch;
+  font-size: 6vmin;
+  font-weight: lighter;
+}
+
+.picker > [title]::before {
+  content: attr(title);
+  position: sticky;
+  top: 0;
+  align-self: start;
+  color: hsl(0 0% 65%);
+  z-index: 1;
+  font-size: min(.5em, 40%);
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 1px 1px hsl(0 0% 0% / 50%);
+}
+
+.picker > [title]:first-child::before {
+  text-align: end;
+}
+
+.picker > * > * {
+  scroll-snap-align: center;
+}
+
+.picker date {
+  text-align: end;
+}
+
+.picker time {
+  text-align: center;
+}

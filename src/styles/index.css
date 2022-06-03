@@ -22,6 +22,7 @@
 @import "./tricks/pull-to-refresh.css" layer(tricks);
 @import "./tricks/scroll-start.css" layer(tricks);
 @import "./tricks/scroll-linked-tabs.css" layer(tricks);
+@import "./tricks/date-time-picker.css" layer(tricks);
 
 @media (prefers-reduced-motion: no-preference) {
   :focus-visible {
