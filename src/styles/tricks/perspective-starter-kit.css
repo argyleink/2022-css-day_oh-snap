@@ -28,12 +28,23 @@
       background: var(--cyan-5);
     }
 
-    &:nth-child(1) > p { transform: translateZ(4px) }
-    &:nth-child(2) > p { transform: translateZ(5px) }
+    &:nth-child(1) > p { transform: translateZ(2px) }
+    &:nth-child(2) > p { transform: translateZ(4px) }
     &:nth-child(3) > p { transform: translateZ(6px) }
     &:nth-child(4) > p { transform: translateZ(7px) }
     &:nth-child(5) > p { transform: translateZ(8px) }
     &:nth-child(6) > p { transform: translateZ(9px) }
+
+    &.kitchen-sink {
+      display: grid;
+      align-content: center;
+
+      & > p{
+        &:nth-child(3) { transform: translateZ(3px) }
+        &:nth-child(2) { transform: translateZ(2px) }
+        &:nth-child(1) { transform: translateZ(1px) }
+      }
+    }
   }
 }
 
