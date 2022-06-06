@@ -40,3 +40,17 @@
 :where(:not(:active)):focus-visible {
   outline-offset: 5px;
 }
+
+#glossary {
+  & > code-gallery > div {
+    transition: opacity 1s ease 1s;
+
+    &.in-view {
+      opacity: 1;
+    }
+
+    &:not(.in-view) {
+      opacity: .1;
+    }
+  }
+}

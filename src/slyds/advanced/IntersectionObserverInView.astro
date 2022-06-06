@@ -12,7 +12,7 @@ import Prism from '/src/utils/Prism.astro'
             .toggle('in-view', node.isIntersecting)
       }
     `}/>
-    <slyd-scrollport id="in-view-scrollport" class="horizontal snap-x">
+    <slyd-scrollport id="in-view-scrollport" class="observe-in-view horizontal snap-x">
       {[...Array(10)].map(() => ( 
         <div></div> 
       ))}
