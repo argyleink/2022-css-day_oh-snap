@@ -6,9 +6,16 @@ import Prism from '/src/utils/Prism.astro'
   <h2>Scroll Start</h2>
   <demo-stage>
     <Prism lang='css' code={`
-      
+      @keyframes scroll-start-target {
+        from { 
+          scroll-snap-align: center; 
+        }
+        to { 
+          scroll-snap-align: unset; 
+        }
+      }
     `}/>
-    <slyd-scrollport class="horizontal snap-x">
+    <slyd-scrollport class="horizontal scroll-start-trick">
       {[...Array(10)].map(() => ( 
         <div></div> 
       ))}

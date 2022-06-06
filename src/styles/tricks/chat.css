@@ -1,0 +1,198 @@
+#chat textarea {
+  color-scheme: dark;
+  font-size: 1.25rem;
+}
+
+.chat-ui {
+  --chat-ui_theme: hsl(200, 100%, 50%);
+  --chat-ui_theme_compliment: color(var(--chat-ui_theme) hue(+200));
+  --chat-ui_theme_text-color: white;
+  --chat-ui_bg: hsl(0, 0%, 90%);
+  --chat-ui_width: 350px;
+  --chat-ui_height: 480px;
+  --chat-ui_message_bg: white;
+  --chat-ui_message_bg2: hsl(0, 0%, 85%);
+  --chat-ui_message_text-color: hsl(0, 0%, 10%);
+  --chat-ui_message_font-size: 0.8rem;
+  --chat-ui_easing-quick: cubic-bezier(0.075, 0.820, 0.165, 1.000);
+  
+  width: 320px;
+  height: 480px;
+  position: relative;
+  background: var(--chat-ui_bg);
+  overflow: hidden;
+  resize: both;
+  text-align: start;
+}
+
+.chat-titlebar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  contain: layout;
+  background: var(--chat-ui_theme, blue);
+  box-shadow: 0 0.1rem 1rem hsla(0, 0%, 0%, .4);
+  overflow: hidden;
+  padding: .5rem 1rem;
+  position: absolute;
+  text-align: start;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 11;
+  will-change: transform;
+  transition: transform 0.15s var(--chat-ui_easing-quick);
+  
+  & > h5 {
+    color: var(--chat-ui_theme_text-color, );
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.1;
+    flex: 2;
+    margin: 0;
+  }
+}
+
+.chat-avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.chat-scrollview {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  scroll-snap-type: y proximity;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.chat-messagelist {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-block: 4rem;
+  min-height: 100%;
+  
+  & > .chat-cluster:last-child {
+    scroll-snap-align: end;
+    scroll-margin-block-end: 5rem;
+  }
+}
+
+.chat-cluster {
+  margin: 0.25rem 3rem 0.75rem 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: flex-start;
+  align-items: flex-end;
+  
+  &[mine] {
+    margin-left: 3rem;
+    margin-right: 0.5rem;
+    align-self: flex-end;
+    
+    & > section {
+      align-items: flex-end;
+    }
+  }
+  
+  & > .chat-avatar {
+    margin-right: 0.5rem;
+    bottom: 1rem;
+    position: sticky;
+  }
+  
+  & > section {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
+    
+    & > h3 {
+      margin: 0 0 0 0.7rem;
+      font-size: 0.7rem;
+      font-weight: 300;
+      letter-spacing: initial;
+      color: hsl(0, 0%, 40%);
+    }
+  }
+}
+
+.chat-message {
+  background-attachment: fixed;
+  background-image: linear-gradient(var(--chat-ui_theme), 30%, hotpink);
+  background-size: 100% 120%;
+  color: white;
+  font-weight: 300;
+  font-size: var(--chat-ui_message_font-size);
+  line-height: 1.4;
+  padding: 0.5rem 0.75rem;
+  margin: 0;
+  border-radius: 0.25rem 1rem 1rem 0.25rem;
+  
+  &:first-of-type {
+    border-radius: 1rem 1rem 1rem 0.25rem;
+  }
+  
+  &:not(:first-child) {
+    margin-top: 3px;
+  }
+}
+
+[mine] .chat-message {
+  background: var(--chat-ui_message_bg2);
+  color: var(--chat-ui_message_text-color);
+  border-radius: 1rem 0.25rem 0.25rem 1rem;
+}
+
+.chat-authoring {
+  color: black;
+  position: absolute;
+  z-index: 12;
+  bottom: 0.5rem;
+  right: 0;
+  box-sizing: border-box;
+  margin: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 1rem 1rem 2px;
+  box-shadow: 0.25rem 0.5rem 1rem hsla(0, 0%, 0%, .2);
+  background: white;
+  caret-color: var(--chat-ui_theme, blue);
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.4em;
+  width: calc(100% - 1rem);
+  transition: width 0.15s var(--chat-ui_easing-quick);
+  
+  &:focus {
+    width: calc(100% - 1rem);
+    outline: none;
+  }
+  
+  &:empty:not(:focus) {
+    width: 50%;
+  }
+  
+  &:empty::after {
+    content: "Say Something..";
+  }
+}

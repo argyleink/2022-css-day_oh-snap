@@ -5,13 +5,17 @@ import Prism from '/src/utils/Prism.astro'
 <slyd id="smart">
   <h2>S.M.A.R.T.</h2>
   <demo-stage>
-    <Prism lang='css' code={`
-      
+    <Prism lang='js' code={`
+      // on scrollend
+      // increase gap to 100vw
+      // el in view is snapped
+      // remove huge gap
     `}/>
-    <slyd-scrollport class="horizontal snap-x">
+    <slyd-scrollport id="smart-container" class="horizontal snap-x">
       {[...Array(10)].map(() => ( 
         <div></div> 
       ))}
     </slyd-scrollport>
   </demo-stage>
+  <p lead>Uncover which is snapped</p>
 </slyd>

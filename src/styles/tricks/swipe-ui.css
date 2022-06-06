@@ -1,0 +1,81 @@
+.swipe-ui {
+  border-radius: 1ch;
+  overflow: hidden;
+}
+
+.swipe-list {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overscroll-behavior-y: contain;
+  
+  display: grid;
+  grid-auto-rows: 10vh;
+  gap: 1px;
+}
+
+.swipe-item {
+  display: grid;
+  grid-template-columns: 100% 100% 100%;
+  grid-template-rows: [action] 1fr;
+  
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-snap-stop: always;
+  
+  color: white;
+  background: hsl(200 100% 50%);
+  
+/*   &:hover > .action:first-child {
+    scroll-snap-align: end;
+  }
+  
+  &:hover > .action:last-child {
+    scroll-snap-align: start;
+  } */
+  
+  &::-webkit-scrollbar {
+    height: 0;
+  }
+}
+
+.swipe-action {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding: 1ch;
+  gap: 1ch;
+  background: hsl(100deg 120% 40%);
+  
+  &.primary {
+    scroll-snap-align: center;
+    overflow-y: hidden;
+    background: inherit;
+    z-index: 1;
+    box-shadow: 0 0 5px 5px hsl(0 0% 0% / 20%);
+  }
+  
+  &.danger { 
+    background: red; 
+  }
+  
+/*   &:not(.primary) {
+    position: sticky;
+    left: 0; 
+    right: 0;
+  } */
+  
+  &:first-child {
+    justify-content: flex-end;
+  }
+  
+  &:last-child {
+    justify-content: flex-start;
+  }
+  
+  & svg {
+    block-size: 2ch;
+  }
+}

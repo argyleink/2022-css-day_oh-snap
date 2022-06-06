@@ -6,12 +6,125 @@ import Prism from '/src/utils/Prism.astro'
   <h2>Date / Time</h2>
   <demo-stage>
     <Prism lang='css' code={`
-      
+      .picker {
+        display: grid;
+        overflow-y: auto;
+        overscroll-behavior-y: contain;
+        scroll-snap-type: y mandatory;
+      }
     `}/>
-    <slyd-scrollport class="horizontal snap-x">
-      {[...Array(10)].map(() => ( 
-        <div></div> 
-      ))}
-    </slyd-scrollport>
+    <div class="picker">
+      <span class="dates" title="DAY">
+        <date>Fri 24 Jul</date>
+        <date>Sat 25 Jul</date>
+        <date>Sun 26 Jul</date>
+        <date>Mon 27 Jul</date>
+        <date>Tue 28 Jul</date>
+        <date>Wed 29 Jul</date>
+        <date>Thu 30 Jul</date>
+        <date>Fri 1 Aug</date>
+        <date>Sat 2 Aug</date>
+        <date>Sun 3 Aug</date>
+        <date>Mon 4 Aug</date>
+        <date>Tue 5 Aug</date>
+        <date>Wed 6 Aug</date>
+        <date>Thu 7 Aug</date>
+        <date>Fri 8 Aug</date>
+        <date>Sat 9 Aug</date> 
+        <date>Sun 10 Aug</date>
+        <date>Mon 11 Aug</date>
+        <date>Tue 12 Aug</date>
+        <date>Wed 13 Aug</date>
+        <date>Thu 14 Aug</date>
+      </span>
+      <span class="hours" title="HOUR">
+        <time>0</time>
+        <time>1</time>
+        <time>2</time>
+        <time>3</time>
+        <time>4</time>
+        <time>5</time>
+        <time>6</time>
+        <time>7</time>
+        <time>8</time>
+        <time>9</time>
+        <time>10</time>
+        <time>11</time>
+        <time>12</time>
+        <time>13</time>
+        <time>14</time>
+        <time>15</time>
+        <time>16</time>
+        <time>17</time>
+        <time>18</time>
+        <time>19</time>
+        <time>20</time>
+        <time>21</time>
+        <time>22</time>
+        <time>23</time>
+      </span>
+      <span class="minutes" title="MIN">
+        <time>0</time>
+        <time>1</time>
+        <time>2</time>
+        <time>3</time>
+        <time>4</time>
+        <time>5</time>
+        <time>6</time>
+        <time>7</time>
+        <time>8</time>
+        <time>9</time>
+        <time>10</time>
+        <time>11</time>
+        <time>12</time>
+        <time>13</time>
+        <time>14</time>
+        <time>15</time>
+        <time>16</time>
+        <time>17</time>
+        <time>18</time>
+        <time>19</time>
+        <time>20</time>
+        <time>21</time>
+        <time>22</time>
+        <time>23</time>
+        <time>24</time>
+        <time>25</time>
+        <time>26</time>
+        <time>27</time>
+        <time>28</time>
+        <time>29</time>
+        <time>30</time>
+        <time>31</time>
+        <time>32</time>
+        <time>33</time>
+        <time>34</time>
+        <time>35</time>
+        <time>36</time>
+        <time>37</time>
+        <time>38</time>
+        <time>39</time>
+        <time>40</time>
+        <time>41</time>
+        <time>42</time>
+        <time>43</time>
+        <time>44</time>
+        <time>45</time>
+        <time>46</time>
+        <time>47</time>
+        <time>48</time>
+        <time>49</time>
+        <time>50</time>
+        <time>51</time>
+        <time>52</time>
+        <time>53</time>
+        <time>54</time>
+        <time>55</time>
+        <time>56</time>
+        <time>57</time>
+        <time>58</time>
+        <time>59</time>
+      </span>
+    </div>
   </demo-stage>
 </slyd>

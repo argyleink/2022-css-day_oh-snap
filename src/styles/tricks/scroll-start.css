@@ -1,0 +1,12 @@
+@keyframes start-scroll {
+  from { scroll-snap-align: center }
+  to   { scroll-snap-align: unset }
+}
+
+.scroll-start-trick {
+  scroll-snap-type: x mandatory;
+
+  & > :nth-child(5) {
+    animation: start-scroll 2ms;
+  }
+}
