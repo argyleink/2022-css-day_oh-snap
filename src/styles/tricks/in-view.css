@@ -1,15 +1,15 @@
-#smart-container {
+#in-view-scrollport {
   & > * {
     transition: 
       opacity 3s ease,
       border-radius 1s ease;
   }
 
-  & > :not(.snapped) {
+  & > :not(.in-view) {
     opacity: .1;
   }
 
-  & > .snapped {
+  & > .in-view {
     border-radius: 50%;
   }
 }

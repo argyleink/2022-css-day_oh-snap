@@ -10,14 +10,11 @@ function determineSnapped(e) {
   snapcontainer.style.gap = '100vw'
   snapcontainer.getBoundingClientRect()
 
-  let [inview] = Array.from(snapcontainer.children).filter(child => {
+  Array.from(snapcontainer.children).forEach(child => {
     let {left} = child.getBoundingClientRect()
-
-    return left > 0 && left < viewportwidth
+    child.classList.toggle('snapped', left > 0 && left < viewportwidth)
   })
 
-  snapcontainer.querySelector('.snapped')?.classList.remove('snapped')
-  inview?.classList.add('snapped')
   snapcontainer.style.gap = null
 }
 

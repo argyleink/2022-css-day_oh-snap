@@ -4,14 +4,16 @@ import Prism from '/src/utils/Prism.astro'
 
 <slyd id="intersection-observer">
   <h2>Intersection Observer</h2>
-  <demo-stage>
-    <Prism lang='css' code={`
-      
-    `}/>
-    <slyd-scrollport class="horizontal snap-x">
-      {[...Array(10)].map(() => ( 
-        <div></div> 
-      ))}
-    </slyd-scrollport>
-  </demo-stage>
+  <Prism lang='js' code={`
+    let ioCallback = nodes => {
+      // filter based on intersection/bounds/etc
+    }
+
+    let io = new IntersectionObserver(ioCallback, { 
+      root: scrollport,
+    })
+
+    for (let item of scrollitems)
+      io.observe(item)
+  `}/>
 </slyd>

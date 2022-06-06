@@ -37,9 +37,6 @@ const determineActiveTabSection = () => {
   matchingNavItem && setActiveTab(matchingNavItem)
 }
 
-// TODO: restore state from URL in nav items
-determineActiveTabSection()
-
 tabnav.addEventListener('click', e => {
   if (e.target.nodeName !== "A") return
   setActiveTab(e.target)

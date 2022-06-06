@@ -24,6 +24,7 @@ import ScrollMargin from '../slyds/advanced/ScrollMargin.astro'
 import ScrollIntoView from '../slyds/advanced/ScrollIntoView.astro'
 import SnapAfterLayout from '../slyds/advanced/SnapAfterLayout.astro'
 import IntersectionObserver from '../slyds/advanced/IntersectionObserver.astro'
+import IntersectionObserverInView from '../slyds/advanced/IntersectionObserverInView.astro'
 import DevTools from '../slyds/advanced/DevTools.astro'
 import SnapGallery from '../slyds/advanced/SnapGallery.astro'
 import RecapScrollport from '../slyds/advanced/RecapScrollport.astro'
@@ -100,6 +101,7 @@ import SnapTo from '../slyds/explainers/SnapTo.astro'
 
     <slyd-group>
     	<BasicsTitle />
+      <DevTools />
     	<BasicHorizontal />
     	<BasicVertical />
     	<Matrix />
@@ -109,7 +111,6 @@ import SnapTo from '../slyds/explainers/SnapTo.astro'
 
     <slyd-group>
       <AdvancedSnap />
-      <DevTools />
     	<SingleHorizontal />
     	<NestedHorizontal />
       <OverscrollBehavior />
@@ -117,6 +118,8 @@ import SnapTo from '../slyds/explainers/SnapTo.astro'
       <ScrollMargin />
       <ScrollIntoView />
       <SnapAfterLayout />
+      <IntersectionObserver />
+      <IntersectionObserverInView />
       <SnapGallery />
       <RecapScrollport />
       <RecapScrollItem />
@@ -131,7 +134,6 @@ import SnapTo from '../slyds/explainers/SnapTo.astro'
       <TapToSnap />
       <AutoForward />
       <InfiniteScroll />
-      <IntersectionObserver />
       <Smart />
       <OverscrollEffect />
       <ScrollStartTrick />

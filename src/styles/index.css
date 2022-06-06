@@ -10,6 +10,7 @@
 @import "./components/demo-stage.css" layer(slides);
 @import "./components/slyd-scrollport.css" layer(slides);
 
+@import "./tricks/in-view.css" layer(tricks);
 @import "./tricks/slides-starter-kit.css" layer(tricks);
 @import "./tricks/sticky-slide-starter-kit.css" layer(tricks);
 @import "./tricks/perspective-starter-kit.css" layer(tricks);

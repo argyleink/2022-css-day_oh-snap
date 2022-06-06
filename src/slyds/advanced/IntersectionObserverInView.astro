@@ -1,0 +1,21 @@
+---
+import Prism from '/src/utils/Prism.astro'
+---
+
+<slyd id="intersection-observer-in-view">
+  <h2>In View‽</h2>
+  <demo-stage>
+    <Prism lang='js' code={`
+      let ioCallback = nodes => {
+        for (let node of nodes)
+          node.target.classList
+            .toggle('in-view', node.isIntersecting)
+      }
+    `}/>
+    <slyd-scrollport id="in-view-scrollport" class="horizontal snap-x">
+      {[...Array(10)].map(() => ( 
+        <div></div> 
+      ))}
+    </slyd-scrollport>
+  </demo-stage>
+</slyd>
