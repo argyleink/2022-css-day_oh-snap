@@ -23,6 +23,12 @@
   overflow: hidden;
   resize: both;
   text-align: start;
+
+  @media (width >= 1920px) {
+    width: 480px;
+    height: 720px;
+    --chat-ui_message_font-size: 1.25rem;
+  }
 }
 
 .chat-titlebar {
@@ -182,6 +188,10 @@
   line-height: 1.4em;
   width: calc(100% - 1rem);
   transition: width 0.15s var(--chat-ui_easing-quick);
+
+  @media (width >= 1920px) {
+    font-size: 1.3rem;
+  }
   
   &:focus {
     width: calc(100% - 1rem);

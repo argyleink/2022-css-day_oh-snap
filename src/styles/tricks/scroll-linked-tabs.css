@@ -112,6 +112,11 @@
   border: 1px solid var(--brand-color-3);
   box-shadow: var(--shadow-5);
   resize: both; 
+
+  @media (width >= 1920px) {
+    inline-size: 480px;
+    block-size: 720px;
+  }
 }
 
 .device > .tabs {

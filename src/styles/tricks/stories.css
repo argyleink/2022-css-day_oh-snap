@@ -13,7 +13,12 @@
   touch-action: pan-x;
   inline-size: 320px;
   block-size: 568px;
-  border-radius: 1ch
+  border-radius: 1ch;
+
+  @media (width >= 1920px) {
+    inline-size: 480px;
+    block-size: 800px;
+  }
 }
 
 .user {

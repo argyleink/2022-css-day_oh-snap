@@ -8,5 +8,6 @@
 
   & > :nth-child(5) {
     animation: start-scroll 2ms;
+    font-weight: bold;
   }
 }

@@ -48,6 +48,11 @@
   padding: 1ch;
   gap: 1ch;
   background: hsl(100deg 120% 40%);
+
+  @media (width >= 1920px) {
+    font-size: 2rem;
+    font-weight: 300;
+  }
   
   &.primary {
     scroll-snap-align: center;
