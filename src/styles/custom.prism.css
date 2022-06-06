@@ -15,6 +15,10 @@ code[class*="language-"], pre[class*="language-"] {
     font-size: clamp(1rem, 2rem, 4vmin);
   }
 
+  @media (width >= 1920px) { 
+    font-size: clamp(1rem, 3rem, 4vmin);
+  }
+
   @media (width >= 2000px) { 
     font-size: max(48px, 4vmin);
   }
