@@ -108,3 +108,10 @@ code-gallery > pre {
 .rtl {
   direction: rtl;
 }
+
+[badge] {
+  border-radius: var(--radius-round);
+  padding-inline: var(--size-5);
+  border: 1px solid var(--indigo-2);
+  color: var(--indigo-2);
+}
