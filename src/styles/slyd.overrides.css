@@ -6,7 +6,7 @@ slyd.lg-gap {
   gap: var(--size-10)
 }
 
-h3, h4, h5, h6 {
+:is(h3, h4, h5, h6):not([color]) {
   color: var(--text-color-2);
 }
 
