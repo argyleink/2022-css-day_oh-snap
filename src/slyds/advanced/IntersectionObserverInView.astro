@@ -9,7 +9,8 @@ import Prism from '/src/utils/Prism.astro'
       let ioCallback = nodes => {
         for (let node of nodes)
           node.target.classList
-            .toggle('in-view', node.isIntersecting)
+            .toggle('in-view', 
+              node.isIntersecting)
       }
     `}/>
     <slyd-scrollport id="in-view-scrollport" class="observe-in-view horizontal snap-x">
