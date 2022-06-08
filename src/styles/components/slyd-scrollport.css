@@ -33,8 +33,4 @@ slyd-scrollport {
     &:nth-child(12n+11) { background: var(--cyan-4) }
     &:nth-child(12n+12) { background: var(--blue-4) }
   }
-
-  &.vertical > * {
-    block-size: 18vmin;
-  }
 }
