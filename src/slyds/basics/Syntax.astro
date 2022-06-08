@@ -1,0 +1,17 @@
+---
+import Prism from '/src/utils/Prism.astro'
+---
+
+<slyd id="the-syntax">
+  <h2 class="lg-codeblock-adjust">Syntax</h2>
+  <Prism lang='css' code={`
+    /* for overflow container */
+    scroll-snap-type: x proximity;
+    scroll-snap-type: y mandatory;
+
+    /* for container items */
+    scroll-snap-align: start;
+    scroll-snap-align: center;
+    scroll-snap-align: end;
+  `}/>
+</slyd>

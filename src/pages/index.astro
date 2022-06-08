@@ -8,6 +8,7 @@ import XandY from '../slyds/review/XandY.astro'
 import Glossary from '../slyds/review/Glossary.astro'
 
 import BasicsTitle from '../slyds/basics/Title.astro'
+import Syntax from '../slyds/basics/Syntax.astro'
 import BasicHorizontal from '../slyds/basics/Horizontal.astro'
 import BasicVertical from '../slyds/basics/Vertical.astro'
 import StopVertical from '../slyds/basics/VerticalStop.astro'
@@ -61,12 +62,12 @@ import SnapTo from '../slyds/explainers/SnapTo.astro'
 ---
 
 <script>
-	import "slyd"
+  import "slyd"
   import "../scripts/index.js"
 </script>
 
 <style is:global>
-	@import "/src/styles/index.css";
+  @import "/src/styles/index.css";
 </style>
 
 <!DOCTYPE html>
@@ -77,8 +78,8 @@ import SnapTo from '../slyds/explainers/SnapTo.astro'
 	<meta name="theme-color" content="#000000">
 
 	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-	<!-- <link rel="stylesheet" href="/src/styles/index.css"> -->
-  <link rel="stylesheet" href="https://gitcdn.xyz/repo/octoshrimpy/blokkfont/master/blokkfont.css">
+	<link rel="stylesheet" href="/src/styles/index.css">
+        <link rel="stylesheet" href="https://gitcdn.xyz/repo/octoshrimpy/blokkfont/master/blokkfont.css">
 
 	<title>CSS Day 2022</title>
 </head>
@@ -103,6 +104,7 @@ import SnapTo from '../slyds/explainers/SnapTo.astro'
 
     <slyd-group>
     	<BasicsTitle />
+        <Syntax />
       <DevTools />
     	<BasicHorizontal />
     	<BasicVertical />
