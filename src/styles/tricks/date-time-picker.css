@@ -41,8 +41,12 @@
   overscroll-behavior-y: contain;
   scroll-snap-type: y mandatory;
   padding-inline-end: 1ch;
-  font-size: 6vmin;
+  font-size: 5vmin;
   font-weight: lighter;
+
+  @media (width >= 1920px) {
+    font-size: 6vmin;
+  }
 }
 
 .picker > [title]::before {

@@ -12,7 +12,7 @@ const determinePTR = event => {
     setTimeout(() => {
       ptr.querySelector('span').textContent = 'Pull to refresh'
       ptr.removeAttribute('loading-state')
-      main.scrollIntoView({ behavior: 'smooth' })
+      main.scrollIntoView({ behavior: 'smooth', block: "nearest" })
       // todo: on scroll complete, set text
     }, 2000)
   }

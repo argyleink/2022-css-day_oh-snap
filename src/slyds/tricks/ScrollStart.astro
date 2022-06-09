@@ -4,15 +4,19 @@ import Prism from '/src/utils/Prism.astro'
 
 <slyd id="scroll-start-trick">
   <h2>Scroll Start</h2>
-  <demo-stage style="min-block-size: 45vh">
+  <demo-stage style="min-block-size: 60vh">
     <Prism lang='css' code={`
-      @keyframes scroll-start-target {
+      @keyframes scroll-start {
         from { 
           scroll-snap-align: center; 
         }
         to { 
           scroll-snap-align: unset; 
         }
+      }
+
+      .starting-scroll-snap-target {
+        animation: scroll-start 2ms;
       }
     `}/>
     <slyd-scrollport class="horizontal scroll-start-trick">

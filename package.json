@@ -1,6 +1,6 @@
 {
-  "name": "@example/basics",
-  "version": "0.0.1",
+  "name": "CSS Day - 2022",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",

@@ -1,3 +1,7 @@
+slyds {
+  --surface-1: black; /* for the projector */
+}
+
 slyds > slyd-group:not(:last-child) > slyd:last-child::after {
   inset-inline: auto 2vw;
 }

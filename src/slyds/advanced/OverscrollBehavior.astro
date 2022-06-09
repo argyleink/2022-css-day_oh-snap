@@ -5,14 +5,13 @@ import Prism from '/src/utils/Prism.astro'
 <slyd id="overscroll-behavior">
   <h2>Trapping Scroll</h2>
 
-  <demo-stage>
+  <demo-stage style="gap: var(--size-7)">
     <Prism lang='css' code={`
       .hungry-overscroll-monster {
         overscroll-behavior: contain;
         overscroll-behavior: auto contain;
         overscroll-behavior-x: contain;
-        overscroll-behavior-y: contain;
-        overscroll-behavior-inline: 😅; 
+        overscroll-behavior-inline: contain; 
       }
     `}/>
     <div class="columns" style="max-block-size: 40vh;">

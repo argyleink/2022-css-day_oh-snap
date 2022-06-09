@@ -22,13 +22,16 @@ import Prism from '/src/utils/Prism.astro'
     <div class="perspective-starter-kit">
       {[...Array(3)].map((x, i) => ( 
         <section>
-          <p>slide {i}</p>
+          <p>depth {i}</p>
         </section> 
       ))}
       <section class="kitchen-sink">
         <p>depth 1</p>
         <p>depth 2</p>
         <p>depth 3</p>
+      </section>
+      <section>
+        <p style="transform: translateZ(3px);">rad 🤘💀</p>
       </section>
     </div>
   </demo-stage>

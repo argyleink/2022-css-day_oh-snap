@@ -28,7 +28,6 @@
 
 .tabs > nav a {
   white-space: nowrap;
-  font-size: 80%;
   color: var(--text-1);
   font-weight: bold;
   text-decoration: none;
@@ -82,6 +81,7 @@
   font-size: 1.25rem;
   text-align: start;
   display: grid;
+  align-content: start;
 
   & > h2:not(:first-of-type) {
     margin-block-start: var(--size-7);
